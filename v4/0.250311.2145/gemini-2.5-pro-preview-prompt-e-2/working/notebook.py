@@ -196,9 +196,13 @@ if nwbfile.intervals:
     for interval_name, time_intervals in nwbfile.intervals.items():
         print(f"- {interval_name}: ({type(time_intervals).__name__}) - {time_intervals.description[:100]}...")
         print(f"  Columns: {list(time_intervals.colnames)}")
-        # Convert to DataFrame to see number of rows
-        df_interval = time_intervals.to_dataframe()
-        print(f"  Number of intervals: {len(df_interval)}")
+        # Accessing .id to get a count of intervals without loading full table to dataframe
+        # This relies on .id being populated and representative of row count.
+        # For TimeIntervals, len(time_intervals.id) gives the number of intervals.
+        if hasattr(time_intervals, 'id') and time_intervals.id is not None:
+            print(f"  Number of intervals: {len(time_intervals.id)}")
+        else:
+            print("  Number of intervals: (Could not be determined without loading fully)")
 else:
     print("No intervals found.")
 
@@ -212,12 +216,25 @@ print("\nContents of nwbfile.units (spike data):")
 if nwbfile.units:
     print(f"  Description: {nwbfile.units.description}")
     print(f"  Columns: {list(nwbfile.units.colnames)}")
-    # Convert to DataFrame to see number of units
-    df_units = nwbfile.units.to_dataframe()
-    print(f"  Number of units: {len(df_units)}")
-    if not df_units.empty:
-        print("\n  Example of first few units (ID and quality):")
-        print(df_units[['quality']].head()) # Showing only a few relevant columns for brevity
+    # Get number of units from the length of the 'id' column, which is usually efficient
+    print(f"  Number of units: {len(nwbfile.units.id)}")
+    
+    # For displaying a few units, convert to DataFrame but only take head.
+    # This might still be slow if underlying data access is not optimized.
+    # We're assuming .to_dataframe().head() is reasonably efficient for a preview.
+    try:
+        df_units_head = nwbfile.units.to_dataframe().head()
+        if not df_units_head.empty:
+            print("\n  Example of first few units (ID and quality):")
+            # Displaying 'quality' if it exists, otherwise just the index (unit ID)
+            if 'quality' in df_units_head.columns:
+                print(df_units_head[['quality']])
+            else:
+                print(df_units_head.index.to_frame(name="Unit ID"))
+        else:
+            print("  Units table is empty or head could not be retrieved.")
+    except Exception as e:
+        print(f"  Could not display head of units table due to: {e}")
 else:
     print("No units (spike data) found.")
 
