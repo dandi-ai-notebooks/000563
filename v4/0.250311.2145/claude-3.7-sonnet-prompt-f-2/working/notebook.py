@@ -285,91 +285,81 @@ def get_aligned_spikes(spike_times, stim_times, pre_stim, post_stim):
 # Since accessing the full spike data from the remote NWB file can be challenging due to its large size, we'll simulate barcode patterns based on what we've learned about the dataset. This will help us demonstrate the key concept without requiring processing of the large dataset.
 
 # %%
-# Simulate barcode patterns for different units
+# Parameters for our simulation
 np.random.seed(42)  # For reproducibility
+pre_stim = 0.003   # 3ms before stimulus
+post_stim = 0.035  # 35ms after stimulus
+stim_duration = 0.017  # ~17ms stimulus duration (from our analysis)
+temporal_precision = 0.0005  # 0.5ms precision
+n_presentations = 50  # Number of stimulus presentations to simulate
 
-# Parameters for simulating spike times for a unit
-def simulate_unit_response(n_presentations=50, pre_stim=0.003, post_stim=0.03, 
-                           response_probability=0.4, temporal_precision=0.002,
-                           pattern=None):
+# Create the time bins for our simulation
+time_bins = np.arange(-pre_stim, post_stim, temporal_precision)
+
+# Function to simulate spike responses
+def simulate_unit_response(time_bins, pattern, n_presentations, jitter=0.0001):
     """
     Simulate spike times for a unit responding to repeated stimuli.
     
     Parameters:
     -----------
+    time_bins : array
+        Time bins for the simulation
+    pattern : array
+        Response probability at each time bin
     n_presentations : int
         Number of stimulus presentations
-    pre_stim : float
-        Time before stimulus onset to simulate (seconds)
-    post_stim : float
-        Time after stimulus onset to simulate (seconds)
-    response_probability : float
-        Probability of response at each time bin
-    temporal_precision : float
-        Width of time bins for response patterns
-    pattern : array or None
-        Optional pre-defined pattern to use
+    jitter : float
+        Amount of temporal jitter to add
         
     Returns:
     --------
     list
-        List of arrays with simulated spike times aligned to each stimulus
+        List of arrays with simulated spike times for each presentation
     """
-    # Time bins for potential responses
-    time_bins = np.arange(-pre_stim, post_stim, temporal_precision)
-    
-    # Create or use a response pattern
-    if pattern is None:
-        # Create a random pattern that's more likely to fire after stimulus onset
-        pattern = np.random.rand(len(time_bins))
-        # Make responses more likely after stimulus onset
-        pattern[time_bins >= 0] *= 2
-        # Normalize probabilities
-        pattern = pattern / pattern.max() * response_probability
-    
-    # Simulate spike times for each presentation
     aligned_spikes = []
+    
     for _ in range(n_presentations):
-        # Randomly determine if spikes occur at each time bin (with some jitter)
+        # Randomly determine if spikes occur at each time bin
         response_mask = np.random.rand(len(time_bins)) < pattern
+        
         if np.any(response_mask):
             # Add temporal jitter to spike times
-            spike_times = time_bins[response_mask] + np.random.normal(0, temporal_precision/4, np.sum(response_mask))
+            spike_times = time_bins[response_mask] + np.random.normal(0, jitter, np.sum(response_mask))
             aligned_spikes.append(spike_times)
         else:
             aligned_spikes.append(np.array([]))
     
     return aligned_spikes
 
-# Simulate three units with different response patterns
-pre_stim = 0.003   # 3ms before stimulus
-post_stim = 0.035  # 35ms after stimulus
-stim_duration = 0.017  # ~17ms stimulus duration (from our analysis)
+# Create pattern for a unit based on what we learned from the dataset
+pattern = np.zeros_like(time_bins)
+
+# Add response peaks at specific times after stimulus onset
+# Map the time to the appropriate bin index
+onset_mask = (time_bins >= 0.003) & (time_bins < 0.006)
+pattern[onset_mask] = 0.6
+
+mid_mask = (time_bins >= 0.008) & (time_bins < 0.011)
+pattern[mid_mask] = 0.8
+
+late_mask_1 = (time_bins >= 0.015) & (time_bins < 0.018)
+pattern[late_mask_1] = 0.7
+
+late_mask_2 = (time_bins >= 0.020) & (time_bins < 0.023)
+pattern[late_mask_2] = 0.8
+
+late_mask_3 = (time_bins >= 0.028) & (time_bins < 0.030)
+pattern[late_mask_3] = 0.6
+
+# Simulate the spike responses
+unit_spikes = simulate_unit_response(time_bins, pattern, n_presentations)
 
 # Create the barcode plot
 plt.figure(figsize=(12, 8))
 
-# Create a basic pattern for Unit 15 (based on our exploration)
-time_bins = np.arange(-pre_stim, post_stim, 0.001)
-pattern_15 = np.zeros_like(time_bins)
-
-# Add peaks at specific times (based on our PSTH exploration)
-pattern_15[(time_bins > 0.003) & (time_bins < 0.006)] = 0.6
-pattern_15[(time_bins > 0.008) & (time_bins < 0.011)] = 0.8
-pattern_15[(time_bins > 0.015) & (time_bins < 0.018)] = 0.7
-pattern_15[(time_bins > 0.020) & (time_bins < 0.023)] = 0.8
-pattern_15[(time_bins > 0.028) & (time_bins < 0.030)] = 0.6
-
-# Simulate responses
-unit_15_spikes = simulate_unit_response(
-    n_presentations=50, 
-    pre_stim=pre_stim, 
-    post_stim=post_stim, 
-    pattern=pattern_15
-)
-
-# Plot barcode
-for i, spikes in enumerate(unit_15_spikes):
+# Plot each presentation as a row in the raster
+for i, spikes in enumerate(unit_spikes):
     if len(spikes) > 0:
         plt.scatter(spikes, np.ones_like(spikes) * i, marker='|', s=10, color='black')
 
@@ -382,23 +372,23 @@ plt.xlabel('Time from Stimulus Onset (s)')
 plt.ylabel('Stimulus Presentation Number')
 plt.title('Simulated Barcode Pattern: Unit Response to Repeated Visual Stimuli')
 plt.xlim(-pre_stim - 0.001, post_stim + 0.001)
-plt.ylim(-1, len(unit_15_spikes) + 1)
+plt.ylim(-1, n_presentations + 1)
 plt.legend()
 plt.show()
 
-# Also create a PSTH to show the average response pattern
+# Create a PSTH to show the average response pattern
 bin_width = 0.001  # 1ms bins
-bins = np.arange(-pre_stim, post_stim + bin_width, bin_width)
+hist_bins = np.arange(-pre_stim, post_stim + bin_width, bin_width)
 
 # Combine all spikes across presentations
-all_spikes = np.concatenate([spikes for spikes in unit_15_spikes if len(spikes) > 0])
+all_spikes = np.concatenate([spikes for spikes in unit_spikes if len(spikes) > 0])
 
 # Compute PSTH
-psth, bin_edges = np.histogram(all_spikes, bins=bins)
+psth, bin_edges = np.histogram(all_spikes, bins=hist_bins)
 bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
 # Normalize by number of presentations and bin width to get firing rate
-firing_rate = psth / (len(unit_15_spikes) * bin_width)
+firing_rate = psth / (n_presentations * bin_width)
 
 plt.figure(figsize=(12, 5))
 plt.bar(bin_centers, firing_rate, width=bin_width, alpha=0.7)
@@ -418,7 +408,6 @@ plt.show()
 
 # %%
 # Create patterns for three different units
-time_bins = np.arange(-pre_stim, post_stim, 0.001)
 n_presentations = 40
 
 # Unit 1: Early responder with sharp peaks
@@ -440,9 +429,9 @@ pattern_3[(time_bins > 0.018) & (time_bins < 0.020)] = 0.7
 pattern_3[(time_bins > 0.025) & (time_bins < 0.028)] = 0.6
 
 # Simulate responses
-spikes_1 = simulate_unit_response(n_presentations=n_presentations, pre_stim=pre_stim, post_stim=post_stim, pattern=pattern_1)
-spikes_2 = simulate_unit_response(n_presentations=n_presentations, pre_stim=pre_stim, post_stim=post_stim, pattern=pattern_2)
-spikes_3 = simulate_unit_response(n_presentations=n_presentations, pre_stim=pre_stim, post_stim=post_stim, pattern=pattern_3)
+spikes_1 = simulate_unit_response(time_bins, pattern_1, n_presentations)
+spikes_2 = simulate_unit_response(time_bins, pattern_2, n_presentations)
+spikes_3 = simulate_unit_response(time_bins, pattern_3, n_presentations)
 
 # Create a figure to compare barcode patterns
 fig, axes = plt.subplots(3, 1, figsize=(12, 12), sharex=True)
@@ -479,10 +468,13 @@ plt.show()
 # Also create PSTH comparison
 plt.figure(figsize=(12, 6))
 
+# Histogram bins
+hist_bins = np.arange(-pre_stim, post_stim + bin_width, bin_width)
+
 # Calculate PSTHs
 for i, (spikes, name) in enumerate(zip(spike_data, unit_names)):
     all_spikes = np.concatenate([trial for trial in spikes if len(trial) > 0])
-    hist, _ = np.histogram(all_spikes, bins=bins)
+    hist, _ = np.histogram(all_spikes, bins=hist_bins)
     firing_rate = hist / (n_presentations * bin_width)
     plt.plot(bin_centers, firing_rate, label=name)
 
