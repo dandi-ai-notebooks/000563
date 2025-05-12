@@ -1,0 +1,2970 @@
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+The first step according to the plan is to get the Dandiset metadata using the command `python tools_cli.py dandiset-info 000563 --version 0.250311.2145`. This command will provide general information about the Dandiset, which will be used in the introductory sections of the notebook.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-info 000563 --version 0.250311.2145', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-info 000563 --version 0.250311.2145
+================================
+{
+  "results": {
+    "id": "DANDI:000563/0.250311.2145",
+    "name": "Allen Institute Openscope - Barcoding",
+    "about": [],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "0.250311.2145",
+    "citation": "Reinagel, Pamela; Lecoq, J\u00e9r\u00f4me; Durand, S\u00e9verine; Gillis, Ryan; Carlson, Mikayla; Peene, Carter; Bawany, Ahad; Johnson, Tye; Amaya, Avalon; Han, Warren; Wilkes, Josh; Nguyen, Katrina; Suarez, Lucas; Naidoo, Robyn; Ouellette, Ben; Grasso, Conor ; Loeffler, Henry; Belski, Hannah; Williford, Ali; Swapp, Jackie; Howard, Robert (2025) Allen Institute Openscope - Barcoding (Version 0.250311.2145) [Data set]. DANDI Archive. https://doi.org/10.48324/dandi.000563/0.250311.2145",
+    "keywords": [
+      "mouse",
+      "neuropixel",
+      "extracellular electrophysiology",
+      "neocortex",
+      "excitatory",
+      "inhibitory",
+      "barcoding",
+      "temporal",
+      "precision"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000563",
+    "contributor": [
+      "National Institutes of Health (NIH)",
+      "Reinagel, Pamela",
+      "Lecoq, J\u00e9r\u00f4me",
+      "Durand, S\u00e9verine",
+      "Gillis, Ryan",
+      "Carlson, Mikayla",
+      "Peene, Carter",
+      "Bawany, Ahad",
+      "Johnson, Tye",
+      "Amaya, Avalon",
+      "Han, Warren",
+      "Wilkes, Josh",
+      "Nguyen, Katrina",
+      "Suarez, Lucas",
+      "Naidoo, Robyn",
+      "Ouellette, Ben",
+      "Grasso, Conor ",
+      "Loeffler, Henry",
+      "Belski, Hannah",
+      "Williford, Ali",
+      "Swapp, Jackie",
+      "Howard, Robert"
+    ],
+    "dateCreated": "2023-06-15T18:31:33.746898+00:00",
+    "description": "Some visual neurons have been shown to respond to white noise flicker visual stimuli with high temporal precision, particularly retinal ganglion cells and LGN relay cells. Responses to white noise stimulation are useful for a variety of analyses, including information theoretic measures and generative models of precise spike timing. However the literature was lacking data on responses to white noise in cortical visual areas, or in the visual stream flowing through the superior colliculus.\n\nThis experiment used the OpenScope Neuropixels passive viewing protocol, and displayed visual stimuli modulated in time by a short, repeated white noise sequence. The visual stimulus was either a spatially uniform field whose luminance was modulated in time (Full Field Flicker), or a standing sinusoidal grating whose contrast was modulated in time (Static Gratings). Perhaps surprisingly, most cortical visual neurons responded well to full-field flicker white noise.  To obtain large populations of neurons in subcortical areas, roughly half of the mice were recorded in a novel electrode configuration. \n\nWhen white noise visual stimuli are presented repeatedly and the neural responses displayed as spike rasters, the rasters look remarkably like UPC codes or bar codes. The same bar-code-like patterns have been found in neurons recorded in different individual animals, and even neurons in different species. We speculated that these barcodes could be used as identifiers of discrete cell types. The Temporal Barcode Dataset provides \"barcodes\" for visually responsive neurons throughout the mouse brain, enabling a test of this hypothesis.",
+    "variableMeasured": [
+      "LFP",
+      "ElectricalSeries",
+      "ProcessingModule",
+      "OptogeneticSeries",
+      "Units"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "signal filtering technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "analytical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+Total prompt tokens: 9749 + 0
+Total completion tokens: 1450 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-info 000563 --version 0.250311.2145' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "id": "DANDI:000563/0.250311.2145",
+    "name": "Allen Institute Openscope - Barcoding",
+    "about": [],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "0.250311.2145",
+    "citation": "Reinagel, Pamela; Lecoq, J\u00e9r\u00f4me; Durand, S\u00e9verine; Gillis, Ryan; Carlson, Mikayla; Peene, Carter; Bawany, Ahad; Johnson, Tye; Amaya, Avalon; Han, Warren; Wilkes, Josh; Nguyen, Katrina; Suarez, Lucas; Naidoo, Robyn; Ouellette, Ben; Grasso, Conor ; Loeffler, Henry; Belski, Hannah; Williford, Ali; Swapp, Jackie; Howard, Robert (2025) Allen Institute Openscope - Barcoding (Version 0.250311.2145) [Data set]. DANDI Archive. https://doi.org/10.48324/dandi.000563/0.250311.2145",
+    "keywords": [
+      "mouse",
+      "neuropixel",
+      "extracellular electrophysiology",
+      "neocortex",
+      "excitatory",
+      "inhibitory",
+      "barcoding",
+      "temporal",
+      "precision"
+    ],
+    "protocol": [],
+    "identifier": "DANDI:000563",
+    "contributor": [
+      "National Institutes of Health (NIH)",
+      "Reinagel, Pamela",
+      "Lecoq, J\u00e9r\u00f4me",
+      "Durand, S\u00e9verine",
+      "Gillis, Ryan",
+      "Carlson, Mikayla",
+      "Peene, Carter",
+      "Bawany, Ahad",
+      "Johnson, Tye",
+      "Amaya, Avalon",
+      "Han, Warren",
+      "Wilkes, Josh",
+      "Nguyen, Katrina",
+      "Suarez, Lucas",
+      "Naidoo, Robyn",
+      "Ouellette, Ben",
+      "Grasso, Conor ",
+      "Loeffler, Henry",
+      "Belski, Hannah",
+      "Williford, Ali",
+      "Swapp, Jackie",
+      "Howard, Robert"
+    ],
+    "dateCreated": "2023-06-15T18:31:33.746898+00:00",
+    "description": "Some visual neurons have been shown to respond to white noise flicker visual stimuli with high temporal precision, particularly retinal ganglion cells and LGN relay cells. Responses to white noise stimulation are useful for a variety of analyses, including information theoretic measures and generative models of precise spike timing. However the literature was lacking data on responses to white noise in cortical visual areas, or in the visual stream flowing through the superior colliculus.\n\nThis experiment used the OpenScope Neuropixels passive viewing protocol, and displayed visual stimuli modulated in time by a short, repeated white noise sequence. The visual stimulus was either a spatially uniform field whose luminance was modulated in time (Full Field Flicker), or a standing sinusoidal grating whose contrast was modulated in time (Static Gratings). Perhaps surprisingly, most cortical visual neurons responded well to full-field flicker white noise.  To obtain large populations of neurons in subcortical areas, roughly half of the mice were recorded in a novel electrode configuration. \n\nWhen white noise visual stimuli are presented repeatedly and the neural responses displayed as spike rasters, the rasters look remarkably like UPC codes or bar codes. The same bar-code-like patterns have been found in neurons recorded in different individual animals, and even neurons in different species. We speculated that these barcodes could be used as identifiers of discrete cell types. The Temporal Barcode Dataset provides \"barcodes\" for visually responsive neurons throughout the mouse brain, enabling a test of this hypothesis.",
+    "variableMeasured": [
+      "LFP",
+      "ElectricalSeries",
+      "ProcessingModule",
+      "OptogeneticSeries",
+      "Units"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "multi electrode extracellular electrophysiology recording technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "signal filtering technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "analytical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 4
+Submitting completion request...
+Processing response...
+The second step in the plan is to get the Dandiset assets using `python tools_cli.py dandiset-assets 000563 --version 0.250311.2145`. This command will list all files in the Dandiset, including NWB files. I will use this output to select an NWB file for detailed analysis in the notebook.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-assets 000563 --version 0.250311.2145', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-assets 000563 --version 0.250311.2145
+================================
+{
+  "results": {
+    "count": 94,
+    "results": [
+      {
+        "asset_id": "2f2ac304-83a3-4352-8612-5f34b68062a0",
+        "path": "sub-681446/sub-681446_ses-1290510496_ogen.nwb",
+        "size": 2504326547
+      },
+      {
+        "asset_id": "1f158fe0-f8ef-495e-b031-da25316a335c",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-0_ecephys.nwb",
+        "size": 1612370163
+      },
+      {
+        "asset_id": "0d97a7dc-d491-450e-a188-06b4808b06fc",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-1_ecephys.nwb",
+        "size": 1981386858
+      },
+      {
+        "asset_id": "98bbc7ea-ba2f-4697-a18d-244c0d667baa",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-2_ecephys.nwb",
+        "size": 1598918907
+      },
+      {
+        "asset_id": "50f880dd-e6e7-4423-8dc2-097742dcc0a8",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-3_ecephys.nwb",
+        "size": 1479913586
+      },
+      {
+        "asset_id": "30204da9-3bc9-43d6-8418-a657c251ce9a",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-4_ecephys.nwb",
+        "size": 1323659243
+      },
+      {
+        "asset_id": "74d2c6b9-8bbf-4ff1-b2a2-b91d401c12bb",
+        "path": "sub-682745/sub-682745_ses-1290822286_ogen.nwb",
+        "size": 3237433423
+      },
+      {
+        "asset_id": "85c1f08a-97e7-4bca-bfa8-4654ce70c37d",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-0_ecephys.nwb",
+        "size": 1832481789
+      },
+      {
+        "asset_id": "57eb6d2e-49a4-44e0-8cd7-4fc2d89d5c71",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-1_ecephys.nwb",
+        "size": 1794340374
+      },
+      {
+        "asset_id": "fd0c8130-98b9-4b7a-9b70-21aa22c60041",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-2_ecephys.nwb",
+        "size": 1923071471
+      },
+      {
+        "asset_id": "cc5c4390-41ed-4dfd-a185-57a1633354d6",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-3_ecephys.nwb",
+        "size": 1994961499
+      },
+      {
+        "asset_id": "ed6a39ac-ca56-452a-bc3c-91ac8f173249",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-4_ecephys.nwb",
+        "size": 1671085558
+      },
+      {
+        "asset_id": "11e23894-17c1-45c6-b2dd-7b090035df3f",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-5_ecephys.nwb",
+        "size": 1845505577
+      },
+      {
+        "asset_id": "96786f67-a6ac-44dc-ba58-61317082fff3",
+        "path": "sub-685263/sub-685263_ses-1292234897_ogen.nwb",
+        "size": 2555712145
+      },
+      {
+        "asset_id": "f438341b-ffde-4d43-b879-5782db168d62",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-0_ecephys.nwb",
+        "size": 1846045776
+      },
+      {
+        "asset_id": "13d8e860-fa4a-485c-b16f-faa13314eb01",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-1_ecephys.nwb",
+        "size": 2022597683
+      },
+      {
+        "asset_id": "bdc8be4d-6839-4439-be3a-c3a560911cf2",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-2_ecephys.nwb",
+        "size": 2028666465
+      },
+      {
+        "asset_id": "8154ef85-3a91-48d7-8189-ed8e24d054a8",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-3_ecephys.nwb",
+        "size": 1764577249
+      },
+      {
+        "asset_id": "e9b77c9a-6ee7-4699-837f-ca7bf2cf4d59",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-4_ecephys.nwb",
+        "size": 1553236641
+      },
+      {
+        "asset_id": "58d145c8-57fc-4aca-a8e9-9483ad24d900",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-5_ecephys.nwb",
+        "size": 1978178114
+      }
+    ]
+  }
+}
+Total prompt tokens: 20940 + 0
+Total completion tokens: 1698 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-assets 000563 --version 0.250311.2145' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "count": 94,
+    "results": [
+      {
+        "asset_id": "2f2ac304-83a3-4352-8612-5f34b68062a0",
+        "path": "sub-681446/sub-681446_ses-1290510496_ogen.nwb",
+        "size": 2504326547
+      },
+      {
+        "asset_id": "1f158fe0-f8ef-495e-b031-da25316a335c",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-0_ecephys.nwb",
+        "size": 1612370163
+      },
+      {
+        "asset_id": "0d97a7dc-d491-450e-a188-06b4808b06fc",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-1_ecephys.nwb",
+        "size": 1981386858
+      },
+      {
+        "asset_id": "98bbc7ea-ba2f-4697-a18d-244c0d667baa",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-2_ecephys.nwb",
+        "size": 1598918907
+      },
+      {
+        "asset_id": "50f880dd-e6e7-4423-8dc2-097742dcc0a8",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-3_ecephys.nwb",
+        "size": 1479913586
+      },
+      {
+        "asset_id": "30204da9-3bc9-43d6-8418-a657c251ce9a",
+        "path": "sub-681446/sub-681446_ses-1290510496_probe-4_ecephys.nwb",
+        "size": 1323659243
+      },
+      {
+        "asset_id": "74d2c6b9-8bbf-4ff1-b2a2-b91d401c12bb",
+        "path": "sub-682745/sub-682745_ses-1290822286_ogen.nwb",
+        "size": 3237433423
+      },
+      {
+        "asset_id": "85c1f08a-97e7-4bca-bfa8-4654ce70c37d",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-0_ecephys.nwb",
+        "size": 1832481789
+      },
+      {
+        "asset_id": "57eb6d2e-49a4-44e0-8cd7-4fc2d89d5c71",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-1_ecephys.nwb",
+        "size": 1794340374
+      },
+      {
+        "asset_id": "fd0c8130-98b9-4b7a-9b70-21aa22c60041",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-2_ecephys.nwb",
+        "size": 1923071471
+      },
+      {
+        "asset_id": "cc5c4390-41ed-4dfd-a185-57a1633354d6",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-3_ecephys.nwb",
+        "size": 1994961499
+      },
+      {
+        "asset_id": "ed6a39ac-ca56-452a-bc3c-91ac8f173249",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-4_ecephys.nwb",
+        "size": 1671085558
+      },
+      {
+        "asset_id": "11e23894-17c1-45c6-b2dd-7b090035df3f",
+        "path": "sub-682745/sub-682745_ses-1290822286_probe-5_ecephys.nwb",
+        "size": 1845505577
+      },
+      {
+        "asset_id": "96786f67-a6ac-44dc-ba58-61317082fff3",
+        "path": "sub-685263/sub-685263_ses-1292234897_ogen.nwb",
+        "size": 2555712145
+      },
+      {
+        "asset_id": "f438341b-ffde-4d43-b879-5782db168d62",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-0_ecephys.nwb",
+        "size": 1846045776
+      },
+      {
+        "asset_id": "13d8e860-fa4a-485c-b16f-faa13314eb01",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-1_ecephys.nwb",
+        "size": 2022597683
+      },
+      {
+        "asset_id": "bdc8be4d-6839-4439-be3a-c3a560911cf2",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-2_ecephys.nwb",
+        "size": 2028666465
+      },
+      {
+        "asset_id": "8154ef85-3a91-48d7-8189-ed8e24d054a8",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-3_ecephys.nwb",
+        "size": 1764577249
+      },
+      {
+        "asset_id": "e9b77c9a-6ee7-4699-837f-ca7bf2cf4d59",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-4_ecephys.nwb",
+        "size": 1553236641
+      },
+      {
+        "asset_id": "58d145c8-57fc-4aca-a8e9-9483ad24d900",
+        "path": "sub-685263/sub-685263_ses-1292234897_probe-5_ecephys.nwb",
+        "size": 1978178114
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 6
+Submitting completion request...
+Processing response...
+The third step is to choose an NWB file and get its information. I have selected `sub-681446/sub-681446_ses-1290510496_ogen.nwb`. The command to get information about this file is `python tools_cli.py nwb-file-info 000563 <NWB_FILE_URL> --version 0.250311.2145`. I will substitute the URL constructed from the asset ID. This will provide details on how to access and load data from this specific NWB file.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py nwb-file-info 000563 https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/ --version 0.250311.2145', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py nwb-file-info 000563 https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/ --version 0.250311.2145
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/src/dandi-ai-notebooks-3/packages/get-nwbfile-info/src/get_nwbfile_info/core.py:346: UserWarning: Warning: Duplicate entries found in the results.
+  warnings.warn("Warning: Duplicate entries found in the results.")
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) Data and metadata for an Ecephys session
+nwb.identifier # (str) 1290510496
+nwb.session_start_time # (datetime) 2023-08-16T00:00:00-07:00
+nwb.timestamps_reference_time # (datetime) 2023-08-16T00:00:00-07:00
+nwb.file_create_date # (list) [datetime.datetime(2024, 2, 22, 21, 53, 24, 741881, tzinfo=tzoffset(None, -28800))]
+nwb.acquisition # (LabelledDict)
+acquisition = nwb.acquisition
+EyeTracking = acquisition["EyeTracking"]
+EyeTracking # (EllipseEyeTracking)
+EyeTracking.spatial_series # (LabelledDict)
+spatial_series = EyeTracking.spatial_series
+corneal_reflection_tracking = spatial_series["corneal_reflection_tracking"]
+corneal_reflection_tracking # (EllipseSeries)
+corneal_reflection_tracking.resolution # (float64) -1.0
+corneal_reflection_tracking.comments # (str) no comments
+corneal_reflection_tracking.description # (str) no description
+corneal_reflection_tracking.conversion # (float64) 1.0
+corneal_reflection_tracking.offset # (float64) 0.0
+corneal_reflection_tracking.unit # (str) meters
+corneal_reflection_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# corneal_reflection_tracking.data[:, :] # Access all data
+# corneal_reflection_tracking.data[0:n, :] # Access first n rows
+# corneal_reflection_tracking.data[:, 0:n] # Access first n columns
+corneal_reflection_tracking.timestamps_unit # (str) seconds
+corneal_reflection_tracking.interval # (int) 1
+corneal_reflection_tracking.reference_frame # (str) nose
+corneal_reflection_tracking.area # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.area[:] # Access all data
+# corneal_reflection_tracking.area[0:n] # Access first n elements
+corneal_reflection_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.area_raw[:] # Access all data
+# corneal_reflection_tracking.area_raw[0:n] # Access first n elements
+corneal_reflection_tracking.width # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.width[:] # Access all data
+# corneal_reflection_tracking.width[0:n] # Access first n elements
+corneal_reflection_tracking.height # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.height[:] # Access all data
+# corneal_reflection_tracking.height[0:n] # Access first n elements
+corneal_reflection_tracking.angle # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.angle[:] # Access all data
+# corneal_reflection_tracking.angle[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps # (EllipseSeries)
+corneal_reflection_tracking.timestamps.resolution # (float64) -1.0
+corneal_reflection_tracking.timestamps.comments # (str) no comments
+corneal_reflection_tracking.timestamps.description # (str) no description
+corneal_reflection_tracking.timestamps.conversion # (float64) 1.0
+corneal_reflection_tracking.timestamps.offset # (float64) 0.0
+corneal_reflection_tracking.timestamps.unit # (str) meters
+corneal_reflection_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# corneal_reflection_tracking.timestamps.data[:, :] # Access all data
+# corneal_reflection_tracking.timestamps.data[0:n, :] # Access first n rows
+# corneal_reflection_tracking.timestamps.data[:, 0:n] # Access first n columns
+corneal_reflection_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.timestamps[:] # Access all data
+# corneal_reflection_tracking.timestamps.timestamps[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.timestamps_unit # (str) seconds
+corneal_reflection_tracking.timestamps.interval # (int) 1
+corneal_reflection_tracking.timestamps.reference_frame # (str) nose
+corneal_reflection_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.area[:] # Access all data
+# corneal_reflection_tracking.timestamps.area[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.area_raw[:] # Access all data
+# corneal_reflection_tracking.timestamps.area_raw[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.width[:] # Access all data
+# corneal_reflection_tracking.timestamps.width[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.height[:] # Access all data
+# corneal_reflection_tracking.timestamps.height[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.angle[:] # Access all data
+# corneal_reflection_tracking.timestamps.angle[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.timestamp_link # (list)
+eye_tracking = spatial_series["eye_tracking"]
+eye_tracking # (EllipseSeries)
+eye_tracking.resolution # (float64) -1.0
+eye_tracking.comments # (str) no comments
+eye_tracking.description # (str) no description
+eye_tracking.conversion # (float64) 1.0
+eye_tracking.offset # (float64) 0.0
+eye_tracking.unit # (str) meters
+eye_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# eye_tracking.data[:, :] # Access all data
+# eye_tracking.data[0:n, :] # Access first n rows
+# eye_tracking.data[:, 0:n] # Access first n columns
+eye_tracking.timestamps # (Dataset) shape (488419,); dtype float64
+# eye_tracking.timestamps[:] # Access all data
+# eye_tracking.timestamps[0:n] # Access first n elements
+eye_tracking.timestamps_unit # (str) seconds
+eye_tracking.interval # (int) 1
+eye_tracking.reference_frame # (str) nose
+eye_tracking.area # (Dataset) shape (488419,); dtype float64
+# eye_tracking.area[:] # Access all data
+# eye_tracking.area[0:n] # Access first n elements
+eye_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# eye_tracking.area_raw[:] # Access all data
+# eye_tracking.area_raw[0:n] # Access first n elements
+eye_tracking.width # (Dataset) shape (488419,); dtype float64
+# eye_tracking.width[:] # Access all data
+# eye_tracking.width[0:n] # Access first n elements
+eye_tracking.height # (Dataset) shape (488419,); dtype float64
+# eye_tracking.height[:] # Access all data
+# eye_tracking.height[0:n] # Access first n elements
+eye_tracking.angle # (Dataset) shape (488419,); dtype float64
+# eye_tracking.angle[:] # Access all data
+# eye_tracking.angle[0:n] # Access first n elements
+eye_tracking.timestamp_link # (list)
+pupil_tracking = spatial_series["pupil_tracking"]
+pupil_tracking # (EllipseSeries)
+pupil_tracking.resolution # (float64) -1.0
+pupil_tracking.comments # (str) no comments
+pupil_tracking.description # (str) no description
+pupil_tracking.conversion # (float64) 1.0
+pupil_tracking.offset # (float64) 0.0
+pupil_tracking.unit # (str) meters
+pupil_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# pupil_tracking.data[:, :] # Access all data
+# pupil_tracking.data[0:n, :] # Access first n rows
+# pupil_tracking.data[:, 0:n] # Access first n columns
+pupil_tracking.timestamps_unit # (str) seconds
+pupil_tracking.interval # (int) 1
+pupil_tracking.reference_frame # (str) nose
+pupil_tracking.area # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.area[:] # Access all data
+# pupil_tracking.area[0:n] # Access first n elements
+pupil_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.area_raw[:] # Access all data
+# pupil_tracking.area_raw[0:n] # Access first n elements
+pupil_tracking.width # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.width[:] # Access all data
+# pupil_tracking.width[0:n] # Access first n elements
+pupil_tracking.height # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.height[:] # Access all data
+# pupil_tracking.height[0:n] # Access first n elements
+pupil_tracking.angle # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.angle[:] # Access all data
+# pupil_tracking.angle[0:n] # Access first n elements
+pupil_tracking.timestamps # (EllipseSeries)
+pupil_tracking.timestamps.resolution # (float64) -1.0
+pupil_tracking.timestamps.comments # (str) no comments
+pupil_tracking.timestamps.description # (str) no description
+pupil_tracking.timestamps.conversion # (float64) 1.0
+pupil_tracking.timestamps.offset # (float64) 0.0
+pupil_tracking.timestamps.unit # (str) meters
+pupil_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# pupil_tracking.timestamps.data[:, :] # Access all data
+# pupil_tracking.timestamps.data[0:n, :] # Access first n rows
+# pupil_tracking.timestamps.data[:, 0:n] # Access first n columns
+pupil_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.timestamps[:] # Access all data
+# pupil_tracking.timestamps.timestamps[0:n] # Access first n elements
+pupil_tracking.timestamps.timestamps_unit # (str) seconds
+pupil_tracking.timestamps.interval # (int) 1
+pupil_tracking.timestamps.reference_frame # (str) nose
+pupil_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.area[:] # Access all data
+# pupil_tracking.timestamps.area[0:n] # Access first n elements
+pupil_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.area_raw[:] # Access all data
+# pupil_tracking.timestamps.area_raw[0:n] # Access first n elements
+pupil_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.width[:] # Access all data
+# pupil_tracking.timestamps.width[0:n] # Access first n elements
+pupil_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.height[:] # Access all data
+# pupil_tracking.timestamps.height[0:n] # Access first n elements
+pupil_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.angle[:] # Access all data
+# pupil_tracking.timestamps.angle[0:n] # Access first n elements
+pupil_tracking.timestamps.timestamp_link # (list)
+EyeTracking.eye_tracking # (EllipseSeries)
+EyeTracking.eye_tracking.resolution # (float64) -1.0
+EyeTracking.eye_tracking.comments # (str) no comments
+EyeTracking.eye_tracking.description # (str) no description
+EyeTracking.eye_tracking.conversion # (float64) 1.0
+EyeTracking.eye_tracking.offset # (float64) 0.0
+EyeTracking.eye_tracking.unit # (str) meters
+EyeTracking.eye_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.eye_tracking.data[:, :] # Access all data
+# EyeTracking.eye_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.eye_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.eye_tracking.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.timestamps[:] # Access all data
+# EyeTracking.eye_tracking.timestamps[0:n] # Access first n elements
+EyeTracking.eye_tracking.timestamps_unit # (str) seconds
+EyeTracking.eye_tracking.interval # (int) 1
+EyeTracking.eye_tracking.reference_frame # (str) nose
+EyeTracking.eye_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.area[:] # Access all data
+# EyeTracking.eye_tracking.area[0:n] # Access first n elements
+EyeTracking.eye_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.area_raw[:] # Access all data
+# EyeTracking.eye_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.eye_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.width[:] # Access all data
+# EyeTracking.eye_tracking.width[0:n] # Access first n elements
+EyeTracking.eye_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.height[:] # Access all data
+# EyeTracking.eye_tracking.height[0:n] # Access first n elements
+EyeTracking.eye_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.angle[:] # Access all data
+# EyeTracking.eye_tracking.angle[0:n] # Access first n elements
+EyeTracking.eye_tracking.timestamp_link # (list)
+EyeTracking.pupil_tracking # (EllipseSeries)
+EyeTracking.pupil_tracking.resolution # (float64) -1.0
+EyeTracking.pupil_tracking.comments # (str) no comments
+EyeTracking.pupil_tracking.description # (str) no description
+EyeTracking.pupil_tracking.conversion # (float64) 1.0
+EyeTracking.pupil_tracking.offset # (float64) 0.0
+EyeTracking.pupil_tracking.unit # (str) meters
+EyeTracking.pupil_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.pupil_tracking.data[:, :] # Access all data
+# EyeTracking.pupil_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.pupil_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.pupil_tracking.timestamps_unit # (str) seconds
+EyeTracking.pupil_tracking.interval # (int) 1
+EyeTracking.pupil_tracking.reference_frame # (str) nose
+EyeTracking.pupil_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.area[:] # Access all data
+# EyeTracking.pupil_tracking.area[0:n] # Access first n elements
+EyeTracking.pupil_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.area_raw[:] # Access all data
+# EyeTracking.pupil_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.pupil_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.width[:] # Access all data
+# EyeTracking.pupil_tracking.width[0:n] # Access first n elements
+EyeTracking.pupil_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.height[:] # Access all data
+# EyeTracking.pupil_tracking.height[0:n] # Access first n elements
+EyeTracking.pupil_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.angle[:] # Access all data
+# EyeTracking.pupil_tracking.angle[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps # (EllipseSeries)
+EyeTracking.pupil_tracking.timestamps.resolution # (float64) -1.0
+EyeTracking.pupil_tracking.timestamps.comments # (str) no comments
+EyeTracking.pupil_tracking.timestamps.description # (str) no description
+EyeTracking.pupil_tracking.timestamps.conversion # (float64) 1.0
+EyeTracking.pupil_tracking.timestamps.offset # (float64) 0.0
+EyeTracking.pupil_tracking.timestamps.unit # (str) meters
+EyeTracking.pupil_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.pupil_tracking.timestamps.data[:, :] # Access all data
+# EyeTracking.pupil_tracking.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.pupil_tracking.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.pupil_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.timestamps[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.timestamps_unit # (str) seconds
+EyeTracking.pupil_tracking.timestamps.interval # (int) 1
+EyeTracking.pupil_tracking.timestamps.reference_frame # (str) nose
+EyeTracking.pupil_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.area[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.area[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.area_raw[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.width[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.width[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.height[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.height[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.angle[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.angle[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.timestamp_link # (list)
+EyeTracking.corneal_reflection_tracking # (EllipseSeries)
+EyeTracking.corneal_reflection_tracking.resolution # (float64) -1.0
+EyeTracking.corneal_reflection_tracking.comments # (str) no comments
+EyeTracking.corneal_reflection_tracking.description # (str) no description
+EyeTracking.corneal_reflection_tracking.conversion # (float64) 1.0
+EyeTracking.corneal_reflection_tracking.offset # (float64) 0.0
+EyeTracking.corneal_reflection_tracking.unit # (str) meters
+EyeTracking.corneal_reflection_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.corneal_reflection_tracking.data[:, :] # Access all data
+# EyeTracking.corneal_reflection_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.corneal_reflection_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.corneal_reflection_tracking.timestamps_unit # (str) seconds
+EyeTracking.corneal_reflection_tracking.interval # (int) 1
+EyeTracking.corneal_reflection_tracking.reference_frame # (str) nose
+EyeTracking.corneal_reflection_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.area[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.area[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.area_raw[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.width[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.width[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.height[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.height[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.angle[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.angle[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps # (EllipseSeries)
+EyeTracking.corneal_reflection_tracking.timestamps.resolution # (float64) -1.0
+EyeTracking.corneal_reflection_tracking.timestamps.comments # (str) no comments
+EyeTracking.corneal_reflection_tracking.timestamps.description # (str) no description
+EyeTracking.corneal_reflection_tracking.timestamps.conversion # (float64) 1.0
+EyeTracking.corneal_reflection_tracking.timestamps.offset # (float64) 0.0
+EyeTracking.corneal_reflection_tracking.timestamps.unit # (str) meters
+EyeTracking.corneal_reflection_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.data[:, :] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.corneal_reflection_tracking.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.corneal_reflection_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.timestamps[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.timestamps_unit # (str) seconds
+EyeTracking.corneal_reflection_tracking.timestamps.interval # (int) 1
+EyeTracking.corneal_reflection_tracking.timestamps.reference_frame # (str) nose
+EyeTracking.corneal_reflection_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.area[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.area[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.area_raw[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.width[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.width[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.height[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.height[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.angle[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.angle[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.timestamp_link # (list)
+EyeTracking.likely_blink # (TimeSeries)
+EyeTracking.likely_blink.resolution # (float64) -1.0
+EyeTracking.likely_blink.comments # (str) no comments
+EyeTracking.likely_blink.description # (str) blinks
+EyeTracking.likely_blink.conversion # (float64) 1.0
+EyeTracking.likely_blink.offset # (float64) 0.0
+EyeTracking.likely_blink.unit # (str) N/A
+EyeTracking.likely_blink.data # (Dataset) shape (488419,); dtype bool
+# EyeTracking.likely_blink.data[:] # Access all data
+# EyeTracking.likely_blink.data[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps_unit # (str) seconds
+EyeTracking.likely_blink.interval # (int) 1
+EyeTracking.likely_blink.timestamps # (EllipseSeries)
+EyeTracking.likely_blink.timestamps.resolution # (float64) -1.0
+EyeTracking.likely_blink.timestamps.comments # (str) no comments
+EyeTracking.likely_blink.timestamps.description # (str) no description
+EyeTracking.likely_blink.timestamps.conversion # (float64) 1.0
+EyeTracking.likely_blink.timestamps.offset # (float64) 0.0
+EyeTracking.likely_blink.timestamps.unit # (str) meters
+EyeTracking.likely_blink.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.likely_blink.timestamps.data[:, :] # Access all data
+# EyeTracking.likely_blink.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.likely_blink.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.likely_blink.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.timestamps[:] # Access all data
+# EyeTracking.likely_blink.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.timestamps_unit # (str) seconds
+EyeTracking.likely_blink.timestamps.interval # (int) 1
+EyeTracking.likely_blink.timestamps.reference_frame # (str) nose
+EyeTracking.likely_blink.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.area[:] # Access all data
+# EyeTracking.likely_blink.timestamps.area[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.area_raw[:] # Access all data
+# EyeTracking.likely_blink.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.width[:] # Access all data
+# EyeTracking.likely_blink.timestamps.width[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.height[:] # Access all data
+# EyeTracking.likely_blink.timestamps.height[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.angle[:] # Access all data
+# EyeTracking.likely_blink.timestamps.angle[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.timestamp_link # (list)
+raw_running_wheel_rotation = acquisition["raw_running_wheel_rotation"]
+raw_running_wheel_rotation # (TimeSeries)
+raw_running_wheel_rotation.resolution # (float64) -1.0
+raw_running_wheel_rotation.comments # (str) no comments
+raw_running_wheel_rotation.description # (str) no description
+raw_running_wheel_rotation.conversion # (float64) 1.0
+raw_running_wheel_rotation.offset # (float64) 0.0
+raw_running_wheel_rotation.unit # (str) radians
+raw_running_wheel_rotation.data # (Dataset) shape (432000,); dtype float32
+# raw_running_wheel_rotation.data[:] # Access all data
+# raw_running_wheel_rotation.data[0:n] # Access first n elements
+raw_running_wheel_rotation.timestamps # (Dataset) shape (432000,); dtype float64
+# raw_running_wheel_rotation.timestamps[:] # Access all data
+# raw_running_wheel_rotation.timestamps[0:n] # Access first n elements
+raw_running_wheel_rotation.timestamps_unit # (str) seconds
+raw_running_wheel_rotation.interval # (int) 1
+raw_running_wheel_rotation.timestamp_link # (list)
+running_wheel_signal_voltage = acquisition["running_wheel_signal_voltage"]
+running_wheel_signal_voltage # (TimeSeries)
+running_wheel_signal_voltage.resolution # (float64) -1.0
+running_wheel_signal_voltage.comments # (str) no comments
+running_wheel_signal_voltage.description # (str) no description
+running_wheel_signal_voltage.conversion # (float64) 1.0
+running_wheel_signal_voltage.offset # (float64) 0.0
+running_wheel_signal_voltage.unit # (str) V
+running_wheel_signal_voltage.data # (Dataset) shape (432000,); dtype float64
+# running_wheel_signal_voltage.data[:] # Access all data
+# running_wheel_signal_voltage.data[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps_unit # (str) seconds
+running_wheel_signal_voltage.interval # (int) 1
+running_wheel_signal_voltage.timestamps # (TimeSeries)
+running_wheel_signal_voltage.timestamps.resolution # (float64) -1.0
+running_wheel_signal_voltage.timestamps.comments # (str) no comments
+running_wheel_signal_voltage.timestamps.description # (str) no description
+running_wheel_signal_voltage.timestamps.conversion # (float64) 1.0
+running_wheel_signal_voltage.timestamps.offset # (float64) 0.0
+running_wheel_signal_voltage.timestamps.unit # (str) radians
+running_wheel_signal_voltage.timestamps.data # (Dataset) shape (432000,); dtype float32
+# running_wheel_signal_voltage.timestamps.data[:] # Access all data
+# running_wheel_signal_voltage.timestamps.data[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps.timestamps # (Dataset) shape (432000,); dtype float64
+# running_wheel_signal_voltage.timestamps.timestamps[:] # Access all data
+# running_wheel_signal_voltage.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps.timestamps_unit # (str) seconds
+running_wheel_signal_voltage.timestamps.interval # (int) 1
+running_wheel_signal_voltage.timestamps.timestamp_link # (list)
+running_wheel_supply_voltage = acquisition["running_wheel_supply_voltage"]
+running_wheel_supply_voltage # (TimeSeries)
+running_wheel_supply_voltage.resolution # (float64) -1.0
+running_wheel_supply_voltage.comments # (str) no comments
+running_wheel_supply_voltage.description # (str) no description
+running_wheel_supply_voltage.conversion # (float64) 1.0
+running_wheel_supply_voltage.offset # (float64) 0.0
+running_wheel_supply_voltage.unit # (str) V
+running_wheel_supply_voltage.data # (Dataset) shape (432000,); dtype float64
+# running_wheel_supply_voltage.data[:] # Access all data
+# running_wheel_supply_voltage.data[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps_unit # (str) seconds
+running_wheel_supply_voltage.interval # (int) 1
+running_wheel_supply_voltage.timestamps # (TimeSeries)
+running_wheel_supply_voltage.timestamps.resolution # (float64) -1.0
+running_wheel_supply_voltage.timestamps.comments # (str) no comments
+running_wheel_supply_voltage.timestamps.description # (str) no description
+running_wheel_supply_voltage.timestamps.conversion # (float64) 1.0
+running_wheel_supply_voltage.timestamps.offset # (float64) 0.0
+running_wheel_supply_voltage.timestamps.unit # (str) radians
+running_wheel_supply_voltage.timestamps.data # (Dataset) shape (432000,); dtype float32
+# running_wheel_supply_voltage.timestamps.data[:] # Access all data
+# running_wheel_supply_voltage.timestamps.data[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps.timestamps # (Dataset) shape (432000,); dtype float64
+# running_wheel_supply_voltage.timestamps.timestamps[:] # Access all data
+# running_wheel_supply_voltage.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps.timestamps_unit # (str) seconds
+running_wheel_supply_voltage.timestamps.interval # (int) 1
+running_wheel_supply_voltage.timestamps.timestamp_link # (list)
+nwb.processing # (LabelledDict)
+processing = nwb.processing
+optotagging = processing["optotagging"]
+optotagging # (ProcessingModule)
+optotagging.description # (str) optogenetic stimulution data
+optotagging.data_interfaces # (LabelledDict)
+data_interfaces = optotagging.data_interfaces
+optotagging_1 = data_interfaces["optotagging"]
+optotagging_1 # (OptogeneticSeries)
+optotagging_1.resolution # (float64) -1.0
+optotagging_1.comments # (str) no comments
+optotagging_1.description # (str) no description
+optotagging_1.conversion # (float64) 1.0
+optotagging_1.offset # (float64) 0.0
+optotagging_1.unit # (str) watts
+optotagging_1.data # (Dataset) shape (450,); dtype float64
+# optotagging_1.data[:] # Access all data
+# optotagging_1.data[0:n] # Access first n elements
+optotagging_1.timestamps # (Dataset) shape (450,); dtype float64
+# optotagging_1.timestamps[:] # Access all data
+# optotagging_1.timestamps[0:n] # Access first n elements
+optotagging_1.timestamps_unit # (str) seconds
+optotagging_1.interval # (int) 1
+optotagging_1.site # (OptogeneticStimulusSite)
+optotagging_1.site.description # (str) Placeholder
+optotagging_1.site.excitation_lambda # (float64) 0.0
+optotagging_1.site.location # (str) Placeholder
+optotagging_1.site.device # (Device)
+optogenetic_stimulation = data_interfaces["optogenetic_stimulation"]
+optogenetic_stimulation # (TimeIntervals)
+optogenetic_stimulation.description # (str) 
+optogenetic_stimulation.colnames # (tuple) ['start_time', 'condition', 'level', 'stop_time', 'stimulus_name', 'duration', 'tags', 'timeseries']
+optogenetic_stimulation.columns # (tuple)
+optogenetic_stimulation.id # (ElementIdentifiers)
+# optogenetic_stimulation.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 450 rows and 10 columns
+# optogenetic_stimulation.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+optogenetic_stimulation.start_time # (VectorData) Start time of epoch, in seconds
+optogenetic_stimulation.condition # (VectorData) no description
+optogenetic_stimulation.level # (VectorData) no description
+optogenetic_stimulation.stop_time # (VectorData) Stop time of epoch, in seconds
+optogenetic_stimulation.stimulus_name # (VectorData) no description
+optogenetic_stimulation.duration # (VectorData) no description
+optogenetic_stimulation.tags # (VectorIndex) Index for VectorData 'tags'
+# optogenetic_stimulation.tags_index[0] # (ndarray)
+# optogenetic_stimulation.tags_index[1] # (ndarray)
+# optogenetic_stimulation.tags_index[2] # (ndarray)
+# optogenetic_stimulation.tags_index[3] # (ndarray)
+# ...
+optogenetic_stimulation.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# optogenetic_stimulation.timeseries_index[0] # (list)
+# optogenetic_stimulation.timeseries_index[1] # (list)
+# optogenetic_stimulation.timeseries_index[2] # (list)
+# optogenetic_stimulation.timeseries_index[3] # (list)
+# ...
+running = processing["running"]
+running # (ProcessingModule)
+running.description # (str) running speed data
+running.data_interfaces # (LabelledDict)
+data_interfaces = running.data_interfaces
+running_speed = data_interfaces["running_speed"]
+running_speed # (TimeSeries)
+running_speed.resolution # (float64) -1.0
+running_speed.comments # (str) no comments
+running_speed.description # (str) no description
+running_speed.conversion # (float64) 1.0
+running_speed.offset # (float64) 0.0
+running_speed.unit # (str) cm/s
+running_speed.data # (Dataset) shape (420018,); dtype float32
+# running_speed.data[:] # Access all data
+# running_speed.data[0:n] # Access first n elements
+running_speed.timestamps # (Dataset) shape (420018,); dtype float64
+# running_speed.timestamps[:] # Access all data
+# running_speed.timestamps[0:n] # Access first n elements
+running_speed.timestamps_unit # (str) seconds
+running_speed.interval # (int) 1
+running_speed.timestamp_link # (list)
+running_speed_end_times = data_interfaces["running_speed_end_times"]
+running_speed_end_times # (TimeSeries)
+running_speed_end_times.resolution # (float64) -1.0
+running_speed_end_times.comments # (str) no comments
+running_speed_end_times.description # (str) no description
+running_speed_end_times.conversion # (float64) 1.0
+running_speed_end_times.offset # (float64) 0.0
+running_speed_end_times.unit # (str) cm/s
+running_speed_end_times.data # (Dataset) shape (420018,); dtype float64
+# running_speed_end_times.data[:] # Access all data
+# running_speed_end_times.data[0:n] # Access first n elements
+running_speed_end_times.timestamps # (Dataset) shape (420018,); dtype float64
+# running_speed_end_times.timestamps[:] # Access all data
+# running_speed_end_times.timestamps[0:n] # Access first n elements
+running_speed_end_times.timestamps_unit # (str) seconds
+running_speed_end_times.interval # (int) 1
+running_wheel_rotation = data_interfaces["running_wheel_rotation"]
+running_wheel_rotation # (TimeSeries)
+running_wheel_rotation.resolution # (float64) -1.0
+running_wheel_rotation.comments # (str) no comments
+running_wheel_rotation.description # (str) no description
+running_wheel_rotation.conversion # (float64) 1.0
+running_wheel_rotation.offset # (float64) 0.0
+running_wheel_rotation.unit # (str) radians
+running_wheel_rotation.data # (Dataset) shape (420018,); dtype float32
+# running_wheel_rotation.data[:] # Access all data
+# running_wheel_rotation.data[0:n] # Access first n elements
+running_wheel_rotation.timestamps_unit # (str) seconds
+running_wheel_rotation.interval # (int) 1
+running_wheel_rotation.timestamps # (TimeSeries)
+running_wheel_rotation.timestamps.resolution # (float64) -1.0
+running_wheel_rotation.timestamps.comments # (str) no comments
+running_wheel_rotation.timestamps.description # (str) no description
+running_wheel_rotation.timestamps.conversion # (float64) 1.0
+running_wheel_rotation.timestamps.offset # (float64) 0.0
+running_wheel_rotation.timestamps.unit # (str) cm/s
+running_wheel_rotation.timestamps.data # (Dataset) shape (420018,); dtype float32
+# running_wheel_rotation.timestamps.data[:] # Access all data
+# running_wheel_rotation.timestamps.data[0:n] # Access first n elements
+running_wheel_rotation.timestamps.timestamps # (Dataset) shape (420018,); dtype float64
+# running_wheel_rotation.timestamps.timestamps[:] # Access all data
+# running_wheel_rotation.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_rotation.timestamps.timestamps_unit # (str) seconds
+running_wheel_rotation.timestamps.interval # (int) 1
+running_wheel_rotation.timestamps.timestamp_link # (list)
+stimulus = processing["stimulus"]
+stimulus # (ProcessingModule)
+stimulus.description # (str) Stimulus Times processing
+stimulus.data_interfaces # (LabelledDict)
+data_interfaces = stimulus.data_interfaces
+timestamps = data_interfaces["timestamps"]
+timestamps # (TimeSeries)
+timestamps.resolution # (float64) -1.0
+timestamps.comments # (str) no comments
+timestamps.description # (str) no description
+timestamps.conversion # (float64) 1.0
+timestamps.offset # (float64) 0.0
+timestamps.unit # (str) s
+timestamps.data # (Dataset) shape (405120,); dtype float64
+# timestamps.data[:] # Access all data
+# timestamps.data[0:n] # Access first n elements
+timestamps.timestamps # (Dataset) shape (405120,); dtype float64
+# timestamps.timestamps[:] # Access all data
+# timestamps.timestamps[0:n] # Access first n elements
+timestamps.timestamps_unit # (str) seconds
+timestamps.interval # (int) 1
+nwb.electrode_groups # (LabelledDict)
+electrode_groups = nwb.electrode_groups
+probeA = electrode_groups["probeA"]
+probeA # (EcephysElectrodeGroup)
+probeA.description # (str) Ecephys Electrode Group
+probeA.location # (str) See electrode locations
+probeA.has_lfp_data # (bool)
+probeA.probe_id # (int64)
+probeA.lfp_sampling_rate # (float64) 1250.0
+probeA.device # (EcephysProbe)
+probeA.device.description # (str) Neuropixels 1.0 Probe
+probeA.device.manufacturer # (str) imec
+probeA.device.sampling_rate # (float64) 30000.0
+probeA.device.probe_id # (int64)
+probeB = electrode_groups["probeB"]
+probeB # (EcephysElectrodeGroup)
+probeB.description # (str) Ecephys Electrode Group
+probeB.location # (str) See electrode locations
+probeB.has_lfp_data # (bool)
+probeB.probe_id # (int64)
+probeB.lfp_sampling_rate # (float64) 1250.0
+probeB.device # (EcephysProbe)
+probeB.device.description # (str) Neuropixels 1.0 Probe
+probeB.device.manufacturer # (str) imec
+probeB.device.sampling_rate # (float64) 30000.0
+probeB.device.probe_id # (int64)
+probeC = electrode_groups["probeC"]
+probeC # (EcephysElectrodeGroup)
+probeC.description # (str) Ecephys Electrode Group
+probeC.location # (str) See electrode locations
+probeC.has_lfp_data # (bool)
+probeC.probe_id # (int64)
+probeC.lfp_sampling_rate # (float64) 1250.0
+probeC.device # (EcephysProbe)
+probeC.device.description # (str) Neuropixels 1.0 Probe
+probeC.device.manufacturer # (str) imec
+probeC.device.sampling_rate # (float64) 30000.0
+probeC.device.probe_id # (int64)
+probeD = electrode_groups["probeD"]
+probeD # (EcephysElectrodeGroup)
+probeD.description # (str) Ecephys Electrode Group
+probeD.location # (str) See electrode locations
+probeD.has_lfp_data # (bool)
+probeD.probe_id # (int64)
+probeD.lfp_sampling_rate # (float64) 1250.0
+probeD.device # (EcephysProbe)
+probeD.device.description # (str) Neuropixels 1.0 Probe
+probeD.device.manufacturer # (str) imec
+probeD.device.sampling_rate # (float64) 30000.0
+probeD.device.probe_id # (int64)
+probeE = electrode_groups["probeE"]
+probeE # (EcephysElectrodeGroup)
+probeE.description # (str) Ecephys Electrode Group
+probeE.location # (str) See electrode locations
+probeE.has_lfp_data # (bool)
+probeE.probe_id # (int64)
+probeE.lfp_sampling_rate # (float64) 1250.0
+probeE.device # (EcephysProbe)
+probeE.device.description # (str) Neuropixels 1.0 Probe
+probeE.device.manufacturer # (str) imec
+probeE.device.sampling_rate # (float64) 30000.0
+probeE.device.probe_id # (int64)
+probeF = electrode_groups["probeF"]
+probeF # (EcephysElectrodeGroup)
+probeF.description # (str) Ecephys Electrode Group
+probeF.location # (str) See electrode locations
+probeF.has_lfp_data # (bool)
+probeF.probe_id # (int64)
+probeF.lfp_sampling_rate # (float64) 1250.0
+probeF.device # (EcephysProbe)
+probeF.device.description # (str) Neuropixels 1.0 Probe
+probeF.device.manufacturer # (str) imec
+probeF.device.sampling_rate # (float64) 30000.0
+probeF.device.probe_id # (int64)
+nwb.devices # (LabelledDict)
+devices = nwb.devices
+OptogeneticStimulusDevice = devices["OptogeneticStimulusDevice"]
+OptogeneticStimulusDevice # (Device)
+probeA = devices["probeA"]
+probeA # (EcephysProbe)
+probeA.description # (str) Neuropixels 1.0 Probe
+probeA.manufacturer # (str) imec
+probeA.sampling_rate # (float64) 30000.0
+probeA.probe_id # (int64)
+probeB = devices["probeB"]
+probeB # (EcephysProbe)
+probeB.description # (str) Neuropixels 1.0 Probe
+probeB.manufacturer # (str) imec
+probeB.sampling_rate # (float64) 30000.0
+probeB.probe_id # (int64)
+probeC = devices["probeC"]
+probeC # (EcephysProbe)
+probeC.description # (str) Neuropixels 1.0 Probe
+probeC.manufacturer # (str) imec
+probeC.sampling_rate # (float64) 30000.0
+probeC.probe_id # (int64)
+probeD = devices["probeD"]
+probeD # (EcephysProbe)
+probeD.description # (str) Neuropixels 1.0 Probe
+probeD.manufacturer # (str) imec
+probeD.sampling_rate # (float64) 30000.0
+probeD.probe_id # (int64)
+probeE = devices["probeE"]
+probeE # (EcephysProbe)
+probeE.description # (str) Neuropixels 1.0 Probe
+probeE.manufacturer # (str) imec
+probeE.sampling_rate # (float64) 30000.0
+probeE.probe_id # (int64)
+probeF = devices["probeF"]
+probeF # (EcephysProbe)
+probeF.description # (str) Neuropixels 1.0 Probe
+probeF.manufacturer # (str) imec
+probeF.sampling_rate # (float64) 30000.0
+probeF.probe_id # (int64)
+nwb.ogen_sites # (LabelledDict)
+ogen_sites = nwb.ogen_sites
+OptogeneticStimulusSite = ogen_sites["OptogeneticStimulusSite"]
+OptogeneticStimulusSite # (OptogeneticStimulusSite)
+OptogeneticStimulusSite.description # (str) Placeholder
+OptogeneticStimulusSite.excitation_lambda # (float64) 0.0
+OptogeneticStimulusSite.location # (str) Placeholder
+OptogeneticStimulusSite.device # (Device)
+nwb.intervals # (LabelledDict)
+intervals = nwb.intervals
+RepeatFFF_presentations = intervals["RepeatFFF_presentations"]
+RepeatFFF_presentations # (TimeIntervals)
+RepeatFFF_presentations.description # (str) Presentation times and stimuli details for 'RepeatFFF' stimuli. \nNote: image_name references con...
+RepeatFFF_presentations.colnames # (tuple)
+RepeatFFF_presentations.columns # (tuple)
+RepeatFFF_presentations.id # (ElementIdentifiers)
+# RepeatFFF_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 43200 rows and 19 columns
+# RepeatFFF_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+RepeatFFF_presentations.start_time # (VectorData) Start time of epoch, in seconds
+RepeatFFF_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+RepeatFFF_presentations.stimulus_name # (VectorData) Name of stimulus
+RepeatFFF_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+RepeatFFF_presentations.index_repeat # (VectorData) No description
+RepeatFFF_presentations.contrast # (VectorData) Contrast of stimulus
+RepeatFFF_presentations.mask # (VectorData) Shape of mask applied to stimulus
+RepeatFFF_presentations.opacity # (VectorData) Opacity of stimulus
+RepeatFFF_presentations.orientation # (VectorData) Orientation of stimulus
+RepeatFFF_presentations.phase # (VectorData) Phase of grating stimulus
+RepeatFFF_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+RepeatFFF_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+RepeatFFF_presentations.units # (VectorData) Units of stimulus size
+RepeatFFF_presentations.stimulus_index # (VectorData) Index of stimulus type
+RepeatFFF_presentations.color # (VectorData) No description
+RepeatFFF_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# RepeatFFF_presentations.tags_index[0] # (ndarray)
+# RepeatFFF_presentations.tags_index[1] # (ndarray)
+# RepeatFFF_presentations.tags_index[2] # (ndarray)
+# RepeatFFF_presentations.tags_index[3] # (ndarray)
+# ...
+RepeatFFF_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# RepeatFFF_presentations.timeseries_index[0] # (list)
+# RepeatFFF_presentations.timeseries_index[1] # (list)
+# RepeatFFF_presentations.timeseries_index[2] # (list)
+# RepeatFFF_presentations.timeseries_index[3] # (list)
+# ...
+UniqueFFF_presentations = intervals["UniqueFFF_presentations"]
+UniqueFFF_presentations # (TimeIntervals)
+UniqueFFF_presentations.description # (str) Presentation times and stimuli details for 'UniqueFFF' stimuli. \nNote: image_name references con...
+UniqueFFF_presentations.colnames # (tuple)
+UniqueFFF_presentations.columns # (tuple)
+UniqueFFF_presentations.id # (ElementIdentifiers)
+# UniqueFFF_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 14400 rows and 19 columns
+# UniqueFFF_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+UniqueFFF_presentations.start_time # (VectorData) Start time of epoch, in seconds
+UniqueFFF_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+UniqueFFF_presentations.stimulus_name # (VectorData) Name of stimulus
+UniqueFFF_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+UniqueFFF_presentations.index_repeat # (VectorData) No description
+UniqueFFF_presentations.contrast # (VectorData) Contrast of stimulus
+UniqueFFF_presentations.mask # (VectorData) Shape of mask applied to stimulus
+UniqueFFF_presentations.opacity # (VectorData) Opacity of stimulus
+UniqueFFF_presentations.orientation # (VectorData) Orientation of stimulus
+UniqueFFF_presentations.phase # (VectorData) Phase of grating stimulus
+UniqueFFF_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+UniqueFFF_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+UniqueFFF_presentations.units # (VectorData) Units of stimulus size
+UniqueFFF_presentations.stimulus_index # (VectorData) Index of stimulus type
+UniqueFFF_presentations.color # (VectorData) No description
+UniqueFFF_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# UniqueFFF_presentations.tags_index[0] # (ndarray)
+# UniqueFFF_presentations.tags_index[1] # (ndarray)
+# UniqueFFF_presentations.tags_index[2] # (ndarray)
+# UniqueFFF_presentations.tags_index[3] # (ndarray)
+# ...
+UniqueFFF_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# UniqueFFF_presentations.timeseries_index[0] # (list)
+# UniqueFFF_presentations.timeseries_index[1] # (list)
+# UniqueFFF_presentations.timeseries_index[2] # (list)
+# UniqueFFF_presentations.timeseries_index[3] # (list)
+# ...
+invalid_times = intervals["invalid_times"]
+invalid_times # (TimeIntervals)
+invalid_times.description # (str) experimental intervals
+invalid_times.colnames # (tuple) ['start_time', 'stop_time', 'tags']
+invalid_times.columns # (tuple)
+invalid_times.id # (ElementIdentifiers)
+# invalid_times.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1 rows and 4 columns
+# invalid_times.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+invalid_times.start_time # (VectorData) Start time of epoch, in seconds
+invalid_times.stop_time # (VectorData) Stop time of epoch, in seconds
+invalid_times.tags # (VectorIndex) Index for VectorData 'tags'
+# invalid_times.tags_index[0] # (ndarray)
+receptive_field_block_presentations = intervals["receptive_field_block_presentations"]
+receptive_field_block_presentations # (TimeIntervals)
+receptive_field_block_presentations.description # (str) Presentation times and stimuli details for 'receptive_field_block' stimuli. \nNote: image_name re...
+receptive_field_block_presentations.colnames # (tuple)
+receptive_field_block_presentations.columns # (tuple)
+receptive_field_block_presentations.id # (ElementIdentifiers)
+# receptive_field_block_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1920 rows and 21 columns
+# receptive_field_block_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+receptive_field_block_presentations.start_time # (VectorData) Start time of epoch, in seconds
+receptive_field_block_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+receptive_field_block_presentations.stimulus_name # (VectorData) Name of stimulus
+receptive_field_block_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+receptive_field_block_presentations.contrast # (VectorData) Contrast of stimulus
+receptive_field_block_presentations.mask # (VectorData) Shape of mask applied to stimulus
+receptive_field_block_presentations.opacity # (VectorData) Opacity of stimulus
+receptive_field_block_presentations.orientation # (VectorData) Orientation of stimulus
+receptive_field_block_presentations.phase # (VectorData) Phase of grating stimulus
+receptive_field_block_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+receptive_field_block_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+receptive_field_block_presentations.units # (VectorData) Units of stimulus size
+receptive_field_block_presentations.stimulus_index # (VectorData) Index of stimulus type
+receptive_field_block_presentations.color # (VectorData) No description
+receptive_field_block_presentations.temporal_frequency # (VectorData) Temporal frequency of stimulus
+receptive_field_block_presentations.x_position # (VectorData) Horizontal position of stimulus on screen
+receptive_field_block_presentations.y_position # (VectorData) Vertical position of stimulus on screen
+receptive_field_block_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# receptive_field_block_presentations.tags_index[0] # (ndarray)
+# receptive_field_block_presentations.tags_index[1] # (ndarray)
+# receptive_field_block_presentations.tags_index[2] # (ndarray)
+# receptive_field_block_presentations.tags_index[3] # (ndarray)
+# ...
+receptive_field_block_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# receptive_field_block_presentations.timeseries_index[0] # (list)
+# receptive_field_block_presentations.timeseries_index[1] # (list)
+# receptive_field_block_presentations.timeseries_index[2] # (list)
+# receptive_field_block_presentations.timeseries_index[3] # (list)
+# ...
+static_block_presentations = intervals["static_block_presentations"]
+static_block_presentations # (TimeIntervals)
+static_block_presentations.description # (str) Presentation times and stimuli details for 'static_block' stimuli. \nNote: image_name references ...
+static_block_presentations.colnames # (tuple)
+static_block_presentations.columns # (tuple)
+static_block_presentations.id # (ElementIdentifiers)
+# static_block_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 345600 rows and 19 columns
+# static_block_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+static_block_presentations.start_time # (VectorData) Start time of epoch, in seconds
+static_block_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+static_block_presentations.stimulus_name # (VectorData) Name of stimulus
+static_block_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+static_block_presentations.index_repeat # (VectorData) No description
+static_block_presentations.contrast # (VectorData) Contrast of stimulus
+static_block_presentations.mask # (VectorData) Shape of mask applied to stimulus
+static_block_presentations.opacity # (VectorData) Opacity of stimulus
+static_block_presentations.orientation # (VectorData) Orientation of stimulus
+static_block_presentations.phase # (VectorData) Phase of grating stimulus
+static_block_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+static_block_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+static_block_presentations.units # (VectorData) Units of stimulus size
+static_block_presentations.stimulus_index # (VectorData) Index of stimulus type
+static_block_presentations.color # (VectorData) No description
+static_block_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# static_block_presentations.tags_index[0] # (ndarray)
+# static_block_presentations.tags_index[1] # (ndarray)
+# static_block_presentations.tags_index[2] # (ndarray)
+# static_block_presentations.tags_index[3] # (ndarray)
+# ...
+static_block_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# static_block_presentations.timeseries_index[0] # (list)
+# static_block_presentations.timeseries_index[1] # (list)
+# static_block_presentations.timeseries_index[2] # (list)
+# static_block_presentations.timeseries_index[3] # (list)
+# ...
+nwb.session_id # (str) 1290510496
+nwb.institution # (str) Allen Institute
+nwb.stimulus_notes # (str) OpenScopeTemporalBarcode
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) metadata about extracellular electrodes
+nwb.electrodes.colnames # (tuple)
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 2304 rows and 13 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.electrodes.location # (VectorData) the location of channel within the subject e.g. brain region
+nwb.electrodes.group # (VectorData) a reference to the ElectrodeGroup this electrode is a part of
+nwb.electrodes.group_name # (VectorData) the name of the ElectrodeGroup this electrode is a part of
+nwb.electrodes.probe_vertical_position # (VectorData) Length-wise position of electrode/channel on device (microns)
+nwb.electrodes.probe_horizontal_position # (VectorData) Width-wise position of electrode/channel on device (microns)
+nwb.electrodes.probe_id # (VectorData) The unique id of this electrode's/channel's device
+nwb.electrodes.local_index # (VectorData) The local index of electrode/channel on device
+nwb.electrodes.valid_data # (VectorData) Whether data from this electrode/channel is usable
+nwb.electrodes.x # (VectorData) the x coordinate of the position (+x is posterior)
+nwb.electrodes.y # (VectorData) the y coordinate of the position (+y is inferior)
+nwb.electrodes.z # (VectorData) the z coordinate of the position (+z is right)
+nwb.electrodes.imp # (VectorData) the impedance of the electrode, in ohms
+nwb.electrodes.filtering # (VectorData) description of hardware filtering, including the filter name and frequency cutoffs
+nwb.subject # (EcephysSpecimen)
+nwb.subject.age # (str) P112D
+nwb.subject.age__reference # (str) birth
+nwb.subject.genotype # (str) Pvalb-IRES-Cre/wt;Ai32(RCL-ChR2(H134R)_EYFP)/wt
+nwb.subject.sex # (str) M
+nwb.subject.species # (str) Mus musculus
+nwb.subject.subject_id # (str) 681446
+nwb.subject.strain # (str) Transgenic
+nwb.subject.specimen_name # (str) 681446
+nwb.subject.age_in_days # (float64) 112.0
+nwb.invalid_times # (TimeIntervals)
+nwb.invalid_times.description # (str) experimental intervals
+nwb.invalid_times.colnames # (tuple) ['start_time', 'stop_time', 'tags']
+nwb.invalid_times.columns # (tuple)
+nwb.invalid_times.id # (ElementIdentifiers)
+# nwb.invalid_times.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1 rows and 4 columns
+# nwb.invalid_times.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.invalid_times.start_time # (VectorData) Start time of epoch, in seconds
+nwb.invalid_times.stop_time # (VectorData) Stop time of epoch, in seconds
+nwb.invalid_times.tags # (VectorIndex) Index for VectorData 'tags'
+# nwb.invalid_times.tags_index[0] # (ndarray)
+nwb.units # (Units)
+nwb.units.description # (str) 
+nwb.units.colnames # (tuple)
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 2572 rows and 32 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.units.isi_violations # (VectorData) no description
+nwb.units.isolation_distance # (VectorData) no description
+nwb.units.PT_ratio # (VectorData) no description
+nwb.units.snr # (VectorData) no description
+nwb.units.spread # (VectorData) no description
+nwb.units.local_index # (VectorData) no description
+nwb.units.cluster_id # (VectorData) no description
+nwb.units.waveform_halfwidth # (VectorData) no description
+nwb.units.cumulative_drift # (VectorData) no description
+nwb.units.velocity_above # (VectorData) no description
+nwb.units.l_ratio # (VectorData) no description
+nwb.units.waveform_duration # (VectorData) no description
+nwb.units.repolarization_slope # (VectorData) no description
+nwb.units.amplitude # (VectorData) no description
+nwb.units.amplitude_cutoff # (VectorData) no description
+nwb.units.recovery_slope # (VectorData) no description
+nwb.units.velocity_below # (VectorData) no description
+nwb.units.d_prime # (VectorData) no description
+nwb.units.max_drift # (VectorData) no description
+nwb.units.peak_channel_id # (VectorData) no description
+nwb.units.quality # (VectorData) no description
+nwb.units.silhouette_score # (VectorData) no description
+nwb.units.nn_hit_rate # (VectorData) no description
+nwb.units.presence_ratio # (VectorData) no description
+nwb.units.firing_rate # (VectorData) no description
+nwb.units.nn_miss_rate # (VectorData) no description
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+nwb.units.spike_amplitudes # (VectorIndex) Index for VectorData 'spike_amplitudes'
+# nwb.units.spike_amplitudes_index[0] # (ndarray)
+# nwb.units.spike_amplitudes_index[1] # (ndarray)
+# nwb.units.spike_amplitudes_index[2] # (ndarray)
+# nwb.units.spike_amplitudes_index[3] # (ndarray)
+# ...
+nwb.units.waveform_mean # (VectorIndex) Index for VectorData 'waveform_mean'
+# nwb.units.waveform_mean_index[0] # (ndarray)
+# nwb.units.waveform_mean_index[1] # (ndarray)
+# nwb.units.waveform_mean_index[2] # (ndarray)
+# nwb.units.waveform_mean_index[3] # (ndarray)
+# ...
+Total prompt tokens: 34640 + 0
+Total completion tokens: 2132 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py nwb-file-info 000563 https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/ --version 0.250311.2145' (requires approval):
+Command executed successfully
+STDOUT:
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) Data and metadata for an Ecephys session
+nwb.identifier # (str) 1290510496
+nwb.session_start_time # (datetime) 2023-08-16T00:00:00-07:00
+nwb.timestamps_reference_time # (datetime) 2023-08-16T00:00:00-07:00
+nwb.file_create_date # (list) [datetime.datetime(2024, 2, 22, 21, 53, 24, 741881, tzinfo=tzoffset(None, -28800))]
+nwb.acquisition # (LabelledDict)
+acquisition = nwb.acquisition
+EyeTracking = acquisition["EyeTracking"]
+EyeTracking # (EllipseEyeTracking)
+EyeTracking.spatial_series # (LabelledDict)
+spatial_series = EyeTracking.spatial_series
+corneal_reflection_tracking = spatial_series["corneal_reflection_tracking"]
+corneal_reflection_tracking # (EllipseSeries)
+corneal_reflection_tracking.resolution # (float64) -1.0
+corneal_reflection_tracking.comments # (str) no comments
+corneal_reflection_tracking.description # (str) no description
+corneal_reflection_tracking.conversion # (float64) 1.0
+corneal_reflection_tracking.offset # (float64) 0.0
+corneal_reflection_tracking.unit # (str) meters
+corneal_reflection_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# corneal_reflection_tracking.data[:, :] # Access all data
+# corneal_reflection_tracking.data[0:n, :] # Access first n rows
+# corneal_reflection_tracking.data[:, 0:n] # Access first n columns
+corneal_reflection_tracking.timestamps_unit # (str) seconds
+corneal_reflection_tracking.interval # (int) 1
+corneal_reflection_tracking.reference_frame # (str) nose
+corneal_reflection_tracking.area # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.area[:] # Access all data
+# corneal_reflection_tracking.area[0:n] # Access first n elements
+corneal_reflection_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.area_raw[:] # Access all data
+# corneal_reflection_tracking.area_raw[0:n] # Access first n elements
+corneal_reflection_tracking.width # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.width[:] # Access all data
+# corneal_reflection_tracking.width[0:n] # Access first n elements
+corneal_reflection_tracking.height # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.height[:] # Access all data
+# corneal_reflection_tracking.height[0:n] # Access first n elements
+corneal_reflection_tracking.angle # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.angle[:] # Access all data
+# corneal_reflection_tracking.angle[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps # (EllipseSeries)
+corneal_reflection_tracking.timestamps.resolution # (float64) -1.0
+corneal_reflection_tracking.timestamps.comments # (str) no comments
+corneal_reflection_tracking.timestamps.description # (str) no description
+corneal_reflection_tracking.timestamps.conversion # (float64) 1.0
+corneal_reflection_tracking.timestamps.offset # (float64) 0.0
+corneal_reflection_tracking.timestamps.unit # (str) meters
+corneal_reflection_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# corneal_reflection_tracking.timestamps.data[:, :] # Access all data
+# corneal_reflection_tracking.timestamps.data[0:n, :] # Access first n rows
+# corneal_reflection_tracking.timestamps.data[:, 0:n] # Access first n columns
+corneal_reflection_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.timestamps[:] # Access all data
+# corneal_reflection_tracking.timestamps.timestamps[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.timestamps_unit # (str) seconds
+corneal_reflection_tracking.timestamps.interval # (int) 1
+corneal_reflection_tracking.timestamps.reference_frame # (str) nose
+corneal_reflection_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.area[:] # Access all data
+# corneal_reflection_tracking.timestamps.area[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.area_raw[:] # Access all data
+# corneal_reflection_tracking.timestamps.area_raw[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.width[:] # Access all data
+# corneal_reflection_tracking.timestamps.width[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.height[:] # Access all data
+# corneal_reflection_tracking.timestamps.height[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# corneal_reflection_tracking.timestamps.angle[:] # Access all data
+# corneal_reflection_tracking.timestamps.angle[0:n] # Access first n elements
+corneal_reflection_tracking.timestamps.timestamp_link # (list)
+eye_tracking = spatial_series["eye_tracking"]
+eye_tracking # (EllipseSeries)
+eye_tracking.resolution # (float64) -1.0
+eye_tracking.comments # (str) no comments
+eye_tracking.description # (str) no description
+eye_tracking.conversion # (float64) 1.0
+eye_tracking.offset # (float64) 0.0
+eye_tracking.unit # (str) meters
+eye_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# eye_tracking.data[:, :] # Access all data
+# eye_tracking.data[0:n, :] # Access first n rows
+# eye_tracking.data[:, 0:n] # Access first n columns
+eye_tracking.timestamps # (Dataset) shape (488419,); dtype float64
+# eye_tracking.timestamps[:] # Access all data
+# eye_tracking.timestamps[0:n] # Access first n elements
+eye_tracking.timestamps_unit # (str) seconds
+eye_tracking.interval # (int) 1
+eye_tracking.reference_frame # (str) nose
+eye_tracking.area # (Dataset) shape (488419,); dtype float64
+# eye_tracking.area[:] # Access all data
+# eye_tracking.area[0:n] # Access first n elements
+eye_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# eye_tracking.area_raw[:] # Access all data
+# eye_tracking.area_raw[0:n] # Access first n elements
+eye_tracking.width # (Dataset) shape (488419,); dtype float64
+# eye_tracking.width[:] # Access all data
+# eye_tracking.width[0:n] # Access first n elements
+eye_tracking.height # (Dataset) shape (488419,); dtype float64
+# eye_tracking.height[:] # Access all data
+# eye_tracking.height[0:n] # Access first n elements
+eye_tracking.angle # (Dataset) shape (488419,); dtype float64
+# eye_tracking.angle[:] # Access all data
+# eye_tracking.angle[0:n] # Access first n elements
+eye_tracking.timestamp_link # (list)
+pupil_tracking = spatial_series["pupil_tracking"]
+pupil_tracking # (EllipseSeries)
+pupil_tracking.resolution # (float64) -1.0
+pupil_tracking.comments # (str) no comments
+pupil_tracking.description # (str) no description
+pupil_tracking.conversion # (float64) 1.0
+pupil_tracking.offset # (float64) 0.0
+pupil_tracking.unit # (str) meters
+pupil_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# pupil_tracking.data[:, :] # Access all data
+# pupil_tracking.data[0:n, :] # Access first n rows
+# pupil_tracking.data[:, 0:n] # Access first n columns
+pupil_tracking.timestamps_unit # (str) seconds
+pupil_tracking.interval # (int) 1
+pupil_tracking.reference_frame # (str) nose
+pupil_tracking.area # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.area[:] # Access all data
+# pupil_tracking.area[0:n] # Access first n elements
+pupil_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.area_raw[:] # Access all data
+# pupil_tracking.area_raw[0:n] # Access first n elements
+pupil_tracking.width # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.width[:] # Access all data
+# pupil_tracking.width[0:n] # Access first n elements
+pupil_tracking.height # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.height[:] # Access all data
+# pupil_tracking.height[0:n] # Access first n elements
+pupil_tracking.angle # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.angle[:] # Access all data
+# pupil_tracking.angle[0:n] # Access first n elements
+pupil_tracking.timestamps # (EllipseSeries)
+pupil_tracking.timestamps.resolution # (float64) -1.0
+pupil_tracking.timestamps.comments # (str) no comments
+pupil_tracking.timestamps.description # (str) no description
+pupil_tracking.timestamps.conversion # (float64) 1.0
+pupil_tracking.timestamps.offset # (float64) 0.0
+pupil_tracking.timestamps.unit # (str) meters
+pupil_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# pupil_tracking.timestamps.data[:, :] # Access all data
+# pupil_tracking.timestamps.data[0:n, :] # Access first n rows
+# pupil_tracking.timestamps.data[:, 0:n] # Access first n columns
+pupil_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.timestamps[:] # Access all data
+# pupil_tracking.timestamps.timestamps[0:n] # Access first n elements
+pupil_tracking.timestamps.timestamps_unit # (str) seconds
+pupil_tracking.timestamps.interval # (int) 1
+pupil_tracking.timestamps.reference_frame # (str) nose
+pupil_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.area[:] # Access all data
+# pupil_tracking.timestamps.area[0:n] # Access first n elements
+pupil_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.area_raw[:] # Access all data
+# pupil_tracking.timestamps.area_raw[0:n] # Access first n elements
+pupil_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.width[:] # Access all data
+# pupil_tracking.timestamps.width[0:n] # Access first n elements
+pupil_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.height[:] # Access all data
+# pupil_tracking.timestamps.height[0:n] # Access first n elements
+pupil_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# pupil_tracking.timestamps.angle[:] # Access all data
+# pupil_tracking.timestamps.angle[0:n] # Access first n elements
+pupil_tracking.timestamps.timestamp_link # (list)
+EyeTracking.eye_tracking # (EllipseSeries)
+EyeTracking.eye_tracking.resolution # (float64) -1.0
+EyeTracking.eye_tracking.comments # (str) no comments
+EyeTracking.eye_tracking.description # (str) no description
+EyeTracking.eye_tracking.conversion # (float64) 1.0
+EyeTracking.eye_tracking.offset # (float64) 0.0
+EyeTracking.eye_tracking.unit # (str) meters
+EyeTracking.eye_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.eye_tracking.data[:, :] # Access all data
+# EyeTracking.eye_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.eye_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.eye_tracking.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.timestamps[:] # Access all data
+# EyeTracking.eye_tracking.timestamps[0:n] # Access first n elements
+EyeTracking.eye_tracking.timestamps_unit # (str) seconds
+EyeTracking.eye_tracking.interval # (int) 1
+EyeTracking.eye_tracking.reference_frame # (str) nose
+EyeTracking.eye_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.area[:] # Access all data
+# EyeTracking.eye_tracking.area[0:n] # Access first n elements
+EyeTracking.eye_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.area_raw[:] # Access all data
+# EyeTracking.eye_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.eye_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.width[:] # Access all data
+# EyeTracking.eye_tracking.width[0:n] # Access first n elements
+EyeTracking.eye_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.height[:] # Access all data
+# EyeTracking.eye_tracking.height[0:n] # Access first n elements
+EyeTracking.eye_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.eye_tracking.angle[:] # Access all data
+# EyeTracking.eye_tracking.angle[0:n] # Access first n elements
+EyeTracking.eye_tracking.timestamp_link # (list)
+EyeTracking.pupil_tracking # (EllipseSeries)
+EyeTracking.pupil_tracking.resolution # (float64) -1.0
+EyeTracking.pupil_tracking.comments # (str) no comments
+EyeTracking.pupil_tracking.description # (str) no description
+EyeTracking.pupil_tracking.conversion # (float64) 1.0
+EyeTracking.pupil_tracking.offset # (float64) 0.0
+EyeTracking.pupil_tracking.unit # (str) meters
+EyeTracking.pupil_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.pupil_tracking.data[:, :] # Access all data
+# EyeTracking.pupil_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.pupil_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.pupil_tracking.timestamps_unit # (str) seconds
+EyeTracking.pupil_tracking.interval # (int) 1
+EyeTracking.pupil_tracking.reference_frame # (str) nose
+EyeTracking.pupil_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.area[:] # Access all data
+# EyeTracking.pupil_tracking.area[0:n] # Access first n elements
+EyeTracking.pupil_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.area_raw[:] # Access all data
+# EyeTracking.pupil_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.pupil_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.width[:] # Access all data
+# EyeTracking.pupil_tracking.width[0:n] # Access first n elements
+EyeTracking.pupil_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.height[:] # Access all data
+# EyeTracking.pupil_tracking.height[0:n] # Access first n elements
+EyeTracking.pupil_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.angle[:] # Access all data
+# EyeTracking.pupil_tracking.angle[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps # (EllipseSeries)
+EyeTracking.pupil_tracking.timestamps.resolution # (float64) -1.0
+EyeTracking.pupil_tracking.timestamps.comments # (str) no comments
+EyeTracking.pupil_tracking.timestamps.description # (str) no description
+EyeTracking.pupil_tracking.timestamps.conversion # (float64) 1.0
+EyeTracking.pupil_tracking.timestamps.offset # (float64) 0.0
+EyeTracking.pupil_tracking.timestamps.unit # (str) meters
+EyeTracking.pupil_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.pupil_tracking.timestamps.data[:, :] # Access all data
+# EyeTracking.pupil_tracking.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.pupil_tracking.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.pupil_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.timestamps[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.timestamps_unit # (str) seconds
+EyeTracking.pupil_tracking.timestamps.interval # (int) 1
+EyeTracking.pupil_tracking.timestamps.reference_frame # (str) nose
+EyeTracking.pupil_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.area[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.area[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.area_raw[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.width[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.width[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.height[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.height[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.pupil_tracking.timestamps.angle[:] # Access all data
+# EyeTracking.pupil_tracking.timestamps.angle[0:n] # Access first n elements
+EyeTracking.pupil_tracking.timestamps.timestamp_link # (list)
+EyeTracking.corneal_reflection_tracking # (EllipseSeries)
+EyeTracking.corneal_reflection_tracking.resolution # (float64) -1.0
+EyeTracking.corneal_reflection_tracking.comments # (str) no comments
+EyeTracking.corneal_reflection_tracking.description # (str) no description
+EyeTracking.corneal_reflection_tracking.conversion # (float64) 1.0
+EyeTracking.corneal_reflection_tracking.offset # (float64) 0.0
+EyeTracking.corneal_reflection_tracking.unit # (str) meters
+EyeTracking.corneal_reflection_tracking.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.corneal_reflection_tracking.data[:, :] # Access all data
+# EyeTracking.corneal_reflection_tracking.data[0:n, :] # Access first n rows
+# EyeTracking.corneal_reflection_tracking.data[:, 0:n] # Access first n columns
+EyeTracking.corneal_reflection_tracking.timestamps_unit # (str) seconds
+EyeTracking.corneal_reflection_tracking.interval # (int) 1
+EyeTracking.corneal_reflection_tracking.reference_frame # (str) nose
+EyeTracking.corneal_reflection_tracking.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.area[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.area[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.area_raw[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.area_raw[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.width[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.width[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.height[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.height[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.angle[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.angle[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps # (EllipseSeries)
+EyeTracking.corneal_reflection_tracking.timestamps.resolution # (float64) -1.0
+EyeTracking.corneal_reflection_tracking.timestamps.comments # (str) no comments
+EyeTracking.corneal_reflection_tracking.timestamps.description # (str) no description
+EyeTracking.corneal_reflection_tracking.timestamps.conversion # (float64) 1.0
+EyeTracking.corneal_reflection_tracking.timestamps.offset # (float64) 0.0
+EyeTracking.corneal_reflection_tracking.timestamps.unit # (str) meters
+EyeTracking.corneal_reflection_tracking.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.data[:, :] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.corneal_reflection_tracking.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.corneal_reflection_tracking.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.timestamps[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.timestamps_unit # (str) seconds
+EyeTracking.corneal_reflection_tracking.timestamps.interval # (int) 1
+EyeTracking.corneal_reflection_tracking.timestamps.reference_frame # (str) nose
+EyeTracking.corneal_reflection_tracking.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.area[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.area[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.area_raw[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.width[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.width[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.height[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.height[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.corneal_reflection_tracking.timestamps.angle[:] # Access all data
+# EyeTracking.corneal_reflection_tracking.timestamps.angle[0:n] # Access first n elements
+EyeTracking.corneal_reflection_tracking.timestamps.timestamp_link # (list)
+EyeTracking.likely_blink # (TimeSeries)
+EyeTracking.likely_blink.resolution # (float64) -1.0
+EyeTracking.likely_blink.comments # (str) no comments
+EyeTracking.likely_blink.description # (str) blinks
+EyeTracking.likely_blink.conversion # (float64) 1.0
+EyeTracking.likely_blink.offset # (float64) 0.0
+EyeTracking.likely_blink.unit # (str) N/A
+EyeTracking.likely_blink.data # (Dataset) shape (488419,); dtype bool
+# EyeTracking.likely_blink.data[:] # Access all data
+# EyeTracking.likely_blink.data[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps_unit # (str) seconds
+EyeTracking.likely_blink.interval # (int) 1
+EyeTracking.likely_blink.timestamps # (EllipseSeries)
+EyeTracking.likely_blink.timestamps.resolution # (float64) -1.0
+EyeTracking.likely_blink.timestamps.comments # (str) no comments
+EyeTracking.likely_blink.timestamps.description # (str) no description
+EyeTracking.likely_blink.timestamps.conversion # (float64) 1.0
+EyeTracking.likely_blink.timestamps.offset # (float64) 0.0
+EyeTracking.likely_blink.timestamps.unit # (str) meters
+EyeTracking.likely_blink.timestamps.data # (Dataset) shape (488419, 2); dtype float64
+# EyeTracking.likely_blink.timestamps.data[:, :] # Access all data
+# EyeTracking.likely_blink.timestamps.data[0:n, :] # Access first n rows
+# EyeTracking.likely_blink.timestamps.data[:, 0:n] # Access first n columns
+EyeTracking.likely_blink.timestamps.timestamps # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.timestamps[:] # Access all data
+# EyeTracking.likely_blink.timestamps.timestamps[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.timestamps_unit # (str) seconds
+EyeTracking.likely_blink.timestamps.interval # (int) 1
+EyeTracking.likely_blink.timestamps.reference_frame # (str) nose
+EyeTracking.likely_blink.timestamps.area # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.area[:] # Access all data
+# EyeTracking.likely_blink.timestamps.area[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.area_raw # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.area_raw[:] # Access all data
+# EyeTracking.likely_blink.timestamps.area_raw[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.width # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.width[:] # Access all data
+# EyeTracking.likely_blink.timestamps.width[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.height # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.height[:] # Access all data
+# EyeTracking.likely_blink.timestamps.height[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.angle # (Dataset) shape (488419,); dtype float64
+# EyeTracking.likely_blink.timestamps.angle[:] # Access all data
+# EyeTracking.likely_blink.timestamps.angle[0:n] # Access first n elements
+EyeTracking.likely_blink.timestamps.timestamp_link # (list)
+raw_running_wheel_rotation = acquisition["raw_running_wheel_rotation"]
+raw_running_wheel_rotation # (TimeSeries)
+raw_running_wheel_rotation.resolution # (float64) -1.0
+raw_running_wheel_rotation.comments # (str) no comments
+raw_running_wheel_rotation.description # (str) no description
+raw_running_wheel_rotation.conversion # (float64) 1.0
+raw_running_wheel_rotation.offset # (float64) 0.0
+raw_running_wheel_rotation.unit # (str) radians
+raw_running_wheel_rotation.data # (Dataset) shape (432000,); dtype float32
+# raw_running_wheel_rotation.data[:] # Access all data
+# raw_running_wheel_rotation.data[0:n] # Access first n elements
+raw_running_wheel_rotation.timestamps # (Dataset) shape (432000,); dtype float64
+# raw_running_wheel_rotation.timestamps[:] # Access all data
+# raw_running_wheel_rotation.timestamps[0:n] # Access first n elements
+raw_running_wheel_rotation.timestamps_unit # (str) seconds
+raw_running_wheel_rotation.interval # (int) 1
+raw_running_wheel_rotation.timestamp_link # (list)
+running_wheel_signal_voltage = acquisition["running_wheel_signal_voltage"]
+running_wheel_signal_voltage # (TimeSeries)
+running_wheel_signal_voltage.resolution # (float64) -1.0
+running_wheel_signal_voltage.comments # (str) no comments
+running_wheel_signal_voltage.description # (str) no description
+running_wheel_signal_voltage.conversion # (float64) 1.0
+running_wheel_signal_voltage.offset # (float64) 0.0
+running_wheel_signal_voltage.unit # (str) V
+running_wheel_signal_voltage.data # (Dataset) shape (432000,); dtype float64
+# running_wheel_signal_voltage.data[:] # Access all data
+# running_wheel_signal_voltage.data[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps_unit # (str) seconds
+running_wheel_signal_voltage.interval # (int) 1
+running_wheel_signal_voltage.timestamps # (TimeSeries)
+running_wheel_signal_voltage.timestamps.resolution # (float64) -1.0
+running_wheel_signal_voltage.timestamps.comments # (str) no comments
+running_wheel_signal_voltage.timestamps.description # (str) no description
+running_wheel_signal_voltage.timestamps.conversion # (float64) 1.0
+running_wheel_signal_voltage.timestamps.offset # (float64) 0.0
+running_wheel_signal_voltage.timestamps.unit # (str) radians
+running_wheel_signal_voltage.timestamps.data # (Dataset) shape (432000,); dtype float32
+# running_wheel_signal_voltage.timestamps.data[:] # Access all data
+# running_wheel_signal_voltage.timestamps.data[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps.timestamps # (Dataset) shape (432000,); dtype float64
+# running_wheel_signal_voltage.timestamps.timestamps[:] # Access all data
+# running_wheel_signal_voltage.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_signal_voltage.timestamps.timestamps_unit # (str) seconds
+running_wheel_signal_voltage.timestamps.interval # (int) 1
+running_wheel_signal_voltage.timestamps.timestamp_link # (list)
+running_wheel_supply_voltage = acquisition["running_wheel_supply_voltage"]
+running_wheel_supply_voltage # (TimeSeries)
+running_wheel_supply_voltage.resolution # (float64) -1.0
+running_wheel_supply_voltage.comments # (str) no comments
+running_wheel_supply_voltage.description # (str) no description
+running_wheel_supply_voltage.conversion # (float64) 1.0
+running_wheel_supply_voltage.offset # (float64) 0.0
+running_wheel_supply_voltage.unit # (str) V
+running_wheel_supply_voltage.data # (Dataset) shape (432000,); dtype float64
+# running_wheel_supply_voltage.data[:] # Access all data
+# running_wheel_supply_voltage.data[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps_unit # (str) seconds
+running_wheel_supply_voltage.interval # (int) 1
+running_wheel_supply_voltage.timestamps # (TimeSeries)
+running_wheel_supply_voltage.timestamps.resolution # (float64) -1.0
+running_wheel_supply_voltage.timestamps.comments # (str) no comments
+running_wheel_supply_voltage.timestamps.description # (str) no description
+running_wheel_supply_voltage.timestamps.conversion # (float64) 1.0
+running_wheel_supply_voltage.timestamps.offset # (float64) 0.0
+running_wheel_supply_voltage.timestamps.unit # (str) radians
+running_wheel_supply_voltage.timestamps.data # (Dataset) shape (432000,); dtype float32
+# running_wheel_supply_voltage.timestamps.data[:] # Access all data
+# running_wheel_supply_voltage.timestamps.data[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps.timestamps # (Dataset) shape (432000,); dtype float64
+# running_wheel_supply_voltage.timestamps.timestamps[:] # Access all data
+# running_wheel_supply_voltage.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_supply_voltage.timestamps.timestamps_unit # (str) seconds
+running_wheel_supply_voltage.timestamps.interval # (int) 1
+running_wheel_supply_voltage.timestamps.timestamp_link # (list)
+nwb.processing # (LabelledDict)
+processing = nwb.processing
+optotagging = processing["optotagging"]
+optotagging # (ProcessingModule)
+optotagging.description # (str) optogenetic stimulution data
+optotagging.data_interfaces # (LabelledDict)
+data_interfaces = optotagging.data_interfaces
+optotagging_1 = data_interfaces["optotagging"]
+optotagging_1 # (OptogeneticSeries)
+optotagging_1.resolution # (float64) -1.0
+optotagging_1.comments # (str) no comments
+optotagging_1.description # (str) no description
+optotagging_1.conversion # (float64) 1.0
+optotagging_1.offset # (float64) 0.0
+optotagging_1.unit # (str) watts
+optotagging_1.data # (Dataset) shape (450,); dtype float64
+# optotagging_1.data[:] # Access all data
+# optotagging_1.data[0:n] # Access first n elements
+optotagging_1.timestamps # (Dataset) shape (450,); dtype float64
+# optotagging_1.timestamps[:] # Access all data
+# optotagging_1.timestamps[0:n] # Access first n elements
+optotagging_1.timestamps_unit # (str) seconds
+optotagging_1.interval # (int) 1
+optotagging_1.site # (OptogeneticStimulusSite)
+optotagging_1.site.description # (str) Placeholder
+optotagging_1.site.excitation_lambda # (float64) 0.0
+optotagging_1.site.location # (str) Placeholder
+optotagging_1.site.device # (Device)
+optogenetic_stimulation = data_interfaces["optogenetic_stimulation"]
+optogenetic_stimulation # (TimeIntervals)
+optogenetic_stimulation.description # (str) 
+optogenetic_stimulation.colnames # (tuple) ['start_time', 'condition', 'level', 'stop_time', 'stimulus_name', 'duration', 'tags', 'timeseries']
+optogenetic_stimulation.columns # (tuple)
+optogenetic_stimulation.id # (ElementIdentifiers)
+# optogenetic_stimulation.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 450 rows and 10 columns
+# optogenetic_stimulation.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+optogenetic_stimulation.start_time # (VectorData) Start time of epoch, in seconds
+optogenetic_stimulation.condition # (VectorData) no description
+optogenetic_stimulation.level # (VectorData) no description
+optogenetic_stimulation.stop_time # (VectorData) Stop time of epoch, in seconds
+optogenetic_stimulation.stimulus_name # (VectorData) no description
+optogenetic_stimulation.duration # (VectorData) no description
+optogenetic_stimulation.tags # (VectorIndex) Index for VectorData 'tags'
+# optogenetic_stimulation.tags_index[0] # (ndarray)
+# optogenetic_stimulation.tags_index[1] # (ndarray)
+# optogenetic_stimulation.tags_index[2] # (ndarray)
+# optogenetic_stimulation.tags_index[3] # (ndarray)
+# ...
+optogenetic_stimulation.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# optogenetic_stimulation.timeseries_index[0] # (list)
+# optogenetic_stimulation.timeseries_index[1] # (list)
+# optogenetic_stimulation.timeseries_index[2] # (list)
+# optogenetic_stimulation.timeseries_index[3] # (list)
+# ...
+running = processing["running"]
+running # (ProcessingModule)
+running.description # (str) running speed data
+running.data_interfaces # (LabelledDict)
+data_interfaces = running.data_interfaces
+running_speed = data_interfaces["running_speed"]
+running_speed # (TimeSeries)
+running_speed.resolution # (float64) -1.0
+running_speed.comments # (str) no comments
+running_speed.description # (str) no description
+running_speed.conversion # (float64) 1.0
+running_speed.offset # (float64) 0.0
+running_speed.unit # (str) cm/s
+running_speed.data # (Dataset) shape (420018,); dtype float32
+# running_speed.data[:] # Access all data
+# running_speed.data[0:n] # Access first n elements
+running_speed.timestamps # (Dataset) shape (420018,); dtype float64
+# running_speed.timestamps[:] # Access all data
+# running_speed.timestamps[0:n] # Access first n elements
+running_speed.timestamps_unit # (str) seconds
+running_speed.interval # (int) 1
+running_speed.timestamp_link # (list)
+running_speed_end_times = data_interfaces["running_speed_end_times"]
+running_speed_end_times # (TimeSeries)
+running_speed_end_times.resolution # (float64) -1.0
+running_speed_end_times.comments # (str) no comments
+running_speed_end_times.description # (str) no description
+running_speed_end_times.conversion # (float64) 1.0
+running_speed_end_times.offset # (float64) 0.0
+running_speed_end_times.unit # (str) cm/s
+running_speed_end_times.data # (Dataset) shape (420018,); dtype float64
+# running_speed_end_times.data[:] # Access all data
+# running_speed_end_times.data[0:n] # Access first n elements
+running_speed_end_times.timestamps # (Dataset) shape (420018,); dtype float64
+# running_speed_end_times.timestamps[:] # Access all data
+# running_speed_end_times.timestamps[0:n] # Access first n elements
+running_speed_end_times.timestamps_unit # (str) seconds
+running_speed_end_times.interval # (int) 1
+running_wheel_rotation = data_interfaces["running_wheel_rotation"]
+running_wheel_rotation # (TimeSeries)
+running_wheel_rotation.resolution # (float64) -1.0
+running_wheel_rotation.comments # (str) no comments
+running_wheel_rotation.description # (str) no description
+running_wheel_rotation.conversion # (float64) 1.0
+running_wheel_rotation.offset # (float64) 0.0
+running_wheel_rotation.unit # (str) radians
+running_wheel_rotation.data # (Dataset) shape (420018,); dtype float32
+# running_wheel_rotation.data[:] # Access all data
+# running_wheel_rotation.data[0:n] # Access first n elements
+running_wheel_rotation.timestamps_unit # (str) seconds
+running_wheel_rotation.interval # (int) 1
+running_wheel_rotation.timestamps # (TimeSeries)
+running_wheel_rotation.timestamps.resolution # (float64) -1.0
+running_wheel_rotation.timestamps.comments # (str) no comments
+running_wheel_rotation.timestamps.description # (str) no description
+running_wheel_rotation.timestamps.conversion # (float64) 1.0
+running_wheel_rotation.timestamps.offset # (float64) 0.0
+running_wheel_rotation.timestamps.unit # (str) cm/s
+running_wheel_rotation.timestamps.data # (Dataset) shape (420018,); dtype float32
+# running_wheel_rotation.timestamps.data[:] # Access all data
+# running_wheel_rotation.timestamps.data[0:n] # Access first n elements
+running_wheel_rotation.timestamps.timestamps # (Dataset) shape (420018,); dtype float64
+# running_wheel_rotation.timestamps.timestamps[:] # Access all data
+# running_wheel_rotation.timestamps.timestamps[0:n] # Access first n elements
+running_wheel_rotation.timestamps.timestamps_unit # (str) seconds
+running_wheel_rotation.timestamps.interval # (int) 1
+running_wheel_rotation.timestamps.timestamp_link # (list)
+stimulus = processing["stimulus"]
+stimulus # (ProcessingModule)
+stimulus.description # (str) Stimulus Times processing
+stimulus.data_interfaces # (LabelledDict)
+data_interfaces = stimulus.data_interfaces
+timestamps = data_interfaces["timestamps"]
+timestamps # (TimeSeries)
+timestamps.resolution # (float64) -1.0
+timestamps.comments # (str) no comments
+timestamps.description # (str) no description
+timestamps.conversion # (float64) 1.0
+timestamps.offset # (float64) 0.0
+timestamps.unit # (str) s
+timestamps.data # (Dataset) shape (405120,); dtype float64
+# timestamps.data[:] # Access all data
+# timestamps.data[0:n] # Access first n elements
+timestamps.timestamps # (Dataset) shape (405120,); dtype float64
+# timestamps.timestamps[:] # Access all data
+# timestamps.timestamps[0:n] # Access first n elements
+timestamps.timestamps_unit # (str) seconds
+timestamps.interval # (int) 1
+nwb.electrode_groups # (LabelledDict)
+electrode_groups = nwb.electrode_groups
+probeA = electrode_groups["probeA"]
+probeA # (EcephysElectrodeGroup)
+probeA.description # (str) Ecephys Electrode Group
+probeA.location # (str) See electrode locations
+probeA.has_lfp_data # (bool)
+probeA.probe_id # (int64)
+probeA.lfp_sampling_rate # (float64) 1250.0
+probeA.device # (EcephysProbe)
+probeA.device.description # (str) Neuropixels 1.0 Probe
+probeA.device.manufacturer # (str) imec
+probeA.device.sampling_rate # (float64) 30000.0
+probeA.device.probe_id # (int64)
+probeB = electrode_groups["probeB"]
+probeB # (EcephysElectrodeGroup)
+probeB.description # (str) Ecephys Electrode Group
+probeB.location # (str) See electrode locations
+probeB.has_lfp_data # (bool)
+probeB.probe_id # (int64)
+probeB.lfp_sampling_rate # (float64) 1250.0
+probeB.device # (EcephysProbe)
+probeB.device.description # (str) Neuropixels 1.0 Probe
+probeB.device.manufacturer # (str) imec
+probeB.device.sampling_rate # (float64) 30000.0
+probeB.device.probe_id # (int64)
+probeC = electrode_groups["probeC"]
+probeC # (EcephysElectrodeGroup)
+probeC.description # (str) Ecephys Electrode Group
+probeC.location # (str) See electrode locations
+probeC.has_lfp_data # (bool)
+probeC.probe_id # (int64)
+probeC.lfp_sampling_rate # (float64) 1250.0
+probeC.device # (EcephysProbe)
+probeC.device.description # (str) Neuropixels 1.0 Probe
+probeC.device.manufacturer # (str) imec
+probeC.device.sampling_rate # (float64) 30000.0
+probeC.device.probe_id # (int64)
+probeD = electrode_groups["probeD"]
+probeD # (EcephysElectrodeGroup)
+probeD.description # (str) Ecephys Electrode Group
+probeD.location # (str) See electrode locations
+probeD.has_lfp_data # (bool)
+probeD.probe_id # (int64)
+probeD.lfp_sampling_rate # (float64) 1250.0
+probeD.device # (EcephysProbe)
+probeD.device.description # (str) Neuropixels 1.0 Probe
+probeD.device.manufacturer # (str) imec
+probeD.device.sampling_rate # (float64) 30000.0
+probeD.device.probe_id # (int64)
+probeE = electrode_groups["probeE"]
+probeE # (EcephysElectrodeGroup)
+probeE.description # (str) Ecephys Electrode Group
+probeE.location # (str) See electrode locations
+probeE.has_lfp_data # (bool)
+probeE.probe_id # (int64)
+probeE.lfp_sampling_rate # (float64) 1250.0
+probeE.device # (EcephysProbe)
+probeE.device.description # (str) Neuropixels 1.0 Probe
+probeE.device.manufacturer # (str) imec
+probeE.device.sampling_rate # (float64) 30000.0
+probeE.device.probe_id # (int64)
+probeF = electrode_groups["probeF"]
+probeF # (EcephysElectrodeGroup)
+probeF.description # (str) Ecephys Electrode Group
+probeF.location # (str) See electrode locations
+probeF.has_lfp_data # (bool)
+probeF.probe_id # (int64)
+probeF.lfp_sampling_rate # (float64) 1250.0
+probeF.device # (EcephysProbe)
+probeF.device.description # (str) Neuropixels 1.0 Probe
+probeF.device.manufacturer # (str) imec
+probeF.device.sampling_rate # (float64) 30000.0
+probeF.device.probe_id # (int64)
+nwb.devices # (LabelledDict)
+devices = nwb.devices
+OptogeneticStimulusDevice = devices["OptogeneticStimulusDevice"]
+OptogeneticStimulusDevice # (Device)
+probeA = devices["probeA"]
+probeA # (EcephysProbe)
+probeA.description # (str) Neuropixels 1.0 Probe
+probeA.manufacturer # (str) imec
+probeA.sampling_rate # (float64) 30000.0
+probeA.probe_id # (int64)
+probeB = devices["probeB"]
+probeB # (EcephysProbe)
+probeB.description # (str) Neuropixels 1.0 Probe
+probeB.manufacturer # (str) imec
+probeB.sampling_rate # (float64) 30000.0
+probeB.probe_id # (int64)
+probeC = devices["probeC"]
+probeC # (EcephysProbe)
+probeC.description # (str) Neuropixels 1.0 Probe
+probeC.manufacturer # (str) imec
+probeC.sampling_rate # (float64) 30000.0
+probeC.probe_id # (int64)
+probeD = devices["probeD"]
+probeD # (EcephysProbe)
+probeD.description # (str) Neuropixels 1.0 Probe
+probeD.manufacturer # (str) imec
+probeD.sampling_rate # (float64) 30000.0
+probeD.probe_id # (int64)
+probeE = devices["probeE"]
+probeE # (EcephysProbe)
+probeE.description # (str) Neuropixels 1.0 Probe
+probeE.manufacturer # (str) imec
+probeE.sampling_rate # (float64) 30000.0
+probeE.probe_id # (int64)
+probeF = devices["probeF"]
+probeF # (EcephysProbe)
+probeF.description # (str) Neuropixels 1.0 Probe
+probeF.manufacturer # (str) imec
+probeF.sampling_rate # (float64) 30000.0
+probeF.probe_id # (int64)
+nwb.ogen_sites # (LabelledDict)
+ogen_sites = nwb.ogen_sites
+OptogeneticStimulusSite = ogen_sites["OptogeneticStimulusSite"]
+OptogeneticStimulusSite # (OptogeneticStimulusSite)
+OptogeneticStimulusSite.description # (str) Placeholder
+OptogeneticStimulusSite.excitation_lambda # (float64) 0.0
+OptogeneticStimulusSite.location # (str) Placeholder
+OptogeneticStimulusSite.device # (Device)
+nwb.intervals # (LabelledDict)
+intervals = nwb.intervals
+RepeatFFF_presentations = intervals["RepeatFFF_presentations"]
+RepeatFFF_presentations # (TimeIntervals)
+RepeatFFF_presentations.description # (str) Presentation times and stimuli details for 'RepeatFFF' stimuli. \nNote: image_name references con...
+RepeatFFF_presentations.colnames # (tuple)
+RepeatFFF_presentations.columns # (tuple)
+RepeatFFF_presentations.id # (ElementIdentifiers)
+# RepeatFFF_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 43200 rows and 19 columns
+# RepeatFFF_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+RepeatFFF_presentations.start_time # (VectorData) Start time of epoch, in seconds
+RepeatFFF_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+RepeatFFF_presentations.stimulus_name # (VectorData) Name of stimulus
+RepeatFFF_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+RepeatFFF_presentations.index_repeat # (VectorData) No description
+RepeatFFF_presentations.contrast # (VectorData) Contrast of stimulus
+RepeatFFF_presentations.mask # (VectorData) Shape of mask applied to stimulus
+RepeatFFF_presentations.opacity # (VectorData) Opacity of stimulus
+RepeatFFF_presentations.orientation # (VectorData) Orientation of stimulus
+RepeatFFF_presentations.phase # (VectorData) Phase of grating stimulus
+RepeatFFF_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+RepeatFFF_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+RepeatFFF_presentations.units # (VectorData) Units of stimulus size
+RepeatFFF_presentations.stimulus_index # (VectorData) Index of stimulus type
+RepeatFFF_presentations.color # (VectorData) No description
+RepeatFFF_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# RepeatFFF_presentations.tags_index[0] # (ndarray)
+# RepeatFFF_presentations.tags_index[1] # (ndarray)
+# RepeatFFF_presentations.tags_index[2] # (ndarray)
+# RepeatFFF_presentations.tags_index[3] # (ndarray)
+# ...
+RepeatFFF_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# RepeatFFF_presentations.timeseries_index[0] # (list)
+# RepeatFFF_presentations.timeseries_index[1] # (list)
+# RepeatFFF_presentations.timeseries_index[2] # (list)
+# RepeatFFF_presentations.timeseries_index[3] # (list)
+# ...
+UniqueFFF_presentations = intervals["UniqueFFF_presentations"]
+UniqueFFF_presentations # (TimeIntervals)
+UniqueFFF_presentations.description # (str) Presentation times and stimuli details for 'UniqueFFF' stimuli. \nNote: image_name references con...
+UniqueFFF_presentations.colnames # (tuple)
+UniqueFFF_presentations.columns # (tuple)
+UniqueFFF_presentations.id # (ElementIdentifiers)
+# UniqueFFF_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 14400 rows and 19 columns
+# UniqueFFF_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+UniqueFFF_presentations.start_time # (VectorData) Start time of epoch, in seconds
+UniqueFFF_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+UniqueFFF_presentations.stimulus_name # (VectorData) Name of stimulus
+UniqueFFF_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+UniqueFFF_presentations.index_repeat # (VectorData) No description
+UniqueFFF_presentations.contrast # (VectorData) Contrast of stimulus
+UniqueFFF_presentations.mask # (VectorData) Shape of mask applied to stimulus
+UniqueFFF_presentations.opacity # (VectorData) Opacity of stimulus
+UniqueFFF_presentations.orientation # (VectorData) Orientation of stimulus
+UniqueFFF_presentations.phase # (VectorData) Phase of grating stimulus
+UniqueFFF_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+UniqueFFF_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+UniqueFFF_presentations.units # (VectorData) Units of stimulus size
+UniqueFFF_presentations.stimulus_index # (VectorData) Index of stimulus type
+UniqueFFF_presentations.color # (VectorData) No description
+UniqueFFF_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# UniqueFFF_presentations.tags_index[0] # (ndarray)
+# UniqueFFF_presentations.tags_index[1] # (ndarray)
+# UniqueFFF_presentations.tags_index[2] # (ndarray)
+# UniqueFFF_presentations.tags_index[3] # (ndarray)
+# ...
+UniqueFFF_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# UniqueFFF_presentations.timeseries_index[0] # (list)
+# UniqueFFF_presentations.timeseries_index[1] # (list)
+# UniqueFFF_presentations.timeseries_index[2] # (list)
+# UniqueFFF_presentations.timeseries_index[3] # (list)
+# ...
+invalid_times = intervals["invalid_times"]
+invalid_times # (TimeIntervals)
+invalid_times.description # (str) experimental intervals
+invalid_times.colnames # (tuple) ['start_time', 'stop_time', 'tags']
+invalid_times.columns # (tuple)
+invalid_times.id # (ElementIdentifiers)
+# invalid_times.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1 rows and 4 columns
+# invalid_times.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+invalid_times.start_time # (VectorData) Start time of epoch, in seconds
+invalid_times.stop_time # (VectorData) Stop time of epoch, in seconds
+invalid_times.tags # (VectorIndex) Index for VectorData 'tags'
+# invalid_times.tags_index[0] # (ndarray)
+receptive_field_block_presentations = intervals["receptive_field_block_presentations"]
+receptive_field_block_presentations # (TimeIntervals)
+receptive_field_block_presentations.description # (str) Presentation times and stimuli details for 'receptive_field_block' stimuli. \nNote: image_name re...
+receptive_field_block_presentations.colnames # (tuple)
+receptive_field_block_presentations.columns # (tuple)
+receptive_field_block_presentations.id # (ElementIdentifiers)
+# receptive_field_block_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1920 rows and 21 columns
+# receptive_field_block_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+receptive_field_block_presentations.start_time # (VectorData) Start time of epoch, in seconds
+receptive_field_block_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+receptive_field_block_presentations.stimulus_name # (VectorData) Name of stimulus
+receptive_field_block_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+receptive_field_block_presentations.contrast # (VectorData) Contrast of stimulus
+receptive_field_block_presentations.mask # (VectorData) Shape of mask applied to stimulus
+receptive_field_block_presentations.opacity # (VectorData) Opacity of stimulus
+receptive_field_block_presentations.orientation # (VectorData) Orientation of stimulus
+receptive_field_block_presentations.phase # (VectorData) Phase of grating stimulus
+receptive_field_block_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+receptive_field_block_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+receptive_field_block_presentations.units # (VectorData) Units of stimulus size
+receptive_field_block_presentations.stimulus_index # (VectorData) Index of stimulus type
+receptive_field_block_presentations.color # (VectorData) No description
+receptive_field_block_presentations.temporal_frequency # (VectorData) Temporal frequency of stimulus
+receptive_field_block_presentations.x_position # (VectorData) Horizontal position of stimulus on screen
+receptive_field_block_presentations.y_position # (VectorData) Vertical position of stimulus on screen
+receptive_field_block_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# receptive_field_block_presentations.tags_index[0] # (ndarray)
+# receptive_field_block_presentations.tags_index[1] # (ndarray)
+# receptive_field_block_presentations.tags_index[2] # (ndarray)
+# receptive_field_block_presentations.tags_index[3] # (ndarray)
+# ...
+receptive_field_block_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# receptive_field_block_presentations.timeseries_index[0] # (list)
+# receptive_field_block_presentations.timeseries_index[1] # (list)
+# receptive_field_block_presentations.timeseries_index[2] # (list)
+# receptive_field_block_presentations.timeseries_index[3] # (list)
+# ...
+static_block_presentations = intervals["static_block_presentations"]
+static_block_presentations # (TimeIntervals)
+static_block_presentations.description # (str) Presentation times and stimuli details for 'static_block' stimuli. \nNote: image_name references ...
+static_block_presentations.colnames # (tuple)
+static_block_presentations.columns # (tuple)
+static_block_presentations.id # (ElementIdentifiers)
+# static_block_presentations.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 345600 rows and 19 columns
+# static_block_presentations.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+static_block_presentations.start_time # (VectorData) Start time of epoch, in seconds
+static_block_presentations.stop_time # (VectorData) Stop time of epoch, in seconds
+static_block_presentations.stimulus_name # (VectorData) Name of stimulus
+static_block_presentations.stimulus_block # (VectorData) Index of contiguous presentations of one stimulus type
+static_block_presentations.index_repeat # (VectorData) No description
+static_block_presentations.contrast # (VectorData) Contrast of stimulus
+static_block_presentations.mask # (VectorData) Shape of mask applied to stimulus
+static_block_presentations.opacity # (VectorData) Opacity of stimulus
+static_block_presentations.orientation # (VectorData) Orientation of stimulus
+static_block_presentations.phase # (VectorData) Phase of grating stimulus
+static_block_presentations.spatial_frequency # (VectorData) Spatial frequency of stimulus
+static_block_presentations.size # (VectorData) Size of stimulus (see ‘units’ field for units)
+static_block_presentations.units # (VectorData) Units of stimulus size
+static_block_presentations.stimulus_index # (VectorData) Index of stimulus type
+static_block_presentations.color # (VectorData) No description
+static_block_presentations.tags # (VectorIndex) Index for VectorData 'tags'
+# static_block_presentations.tags_index[0] # (ndarray)
+# static_block_presentations.tags_index[1] # (ndarray)
+# static_block_presentations.tags_index[2] # (ndarray)
+# static_block_presentations.tags_index[3] # (ndarray)
+# ...
+static_block_presentations.timeseries # (VectorIndex) Index for VectorData 'timeseries'
+# static_block_presentations.timeseries_index[0] # (list)
+# static_block_presentations.timeseries_index[1] # (list)
+# static_block_presentations.timeseries_index[2] # (list)
+# static_block_presentations.timeseries_index[3] # (list)
+# ...
+nwb.session_id # (str) 1290510496
+nwb.institution # (str) Allen Institute
+nwb.stimulus_notes # (str) OpenScopeTemporalBarcode
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) metadata about extracellular electrodes
+nwb.electrodes.colnames # (tuple)
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 2304 rows and 13 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.electrodes.location # (VectorData) the location of channel within the subject e.g. brain region
+nwb.electrodes.group # (VectorData) a reference to the ElectrodeGroup this electrode is a part of
+nwb.electrodes.group_name # (VectorData) the name of the ElectrodeGroup this electrode is a part of
+nwb.electrodes.probe_vertical_position # (VectorData) Length-wise position of electrode/channel on device (microns)
+nwb.electrodes.probe_horizontal_position # (VectorData) Width-wise position of electrode/channel on device (microns)
+nwb.electrodes.probe_id # (VectorData) The unique id of this electrode's/channel's device
+nwb.electrodes.local_index # (VectorData) The local index of electrode/channel on device
+nwb.electrodes.valid_data # (VectorData) Whether data from this electrode/channel is usable
+nwb.electrodes.x # (VectorData) the x coordinate of the position (+x is posterior)
+nwb.electrodes.y # (VectorData) the y coordinate of the position (+y is inferior)
+nwb.electrodes.z # (VectorData) the z coordinate of the position (+z is right)
+nwb.electrodes.imp # (VectorData) the impedance of the electrode, in ohms
+nwb.electrodes.filtering # (VectorData) description of hardware filtering, including the filter name and frequency cutoffs
+nwb.subject # (EcephysSpecimen)
+nwb.subject.age # (str) P112D
+nwb.subject.age__reference # (str) birth
+nwb.subject.genotype # (str) Pvalb-IRES-Cre/wt;Ai32(RCL-ChR2(H134R)_EYFP)/wt
+nwb.subject.sex # (str) M
+nwb.subject.species # (str) Mus musculus
+nwb.subject.subject_id # (str) 681446
+nwb.subject.strain # (str) Transgenic
+nwb.subject.specimen_name # (str) 681446
+nwb.subject.age_in_days # (float64) 112.0
+nwb.invalid_times # (TimeIntervals)
+nwb.invalid_times.description # (str) experimental intervals
+nwb.invalid_times.colnames # (tuple) ['start_time', 'stop_time', 'tags']
+nwb.invalid_times.columns # (tuple)
+nwb.invalid_times.id # (ElementIdentifiers)
+# nwb.invalid_times.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 1 rows and 4 columns
+# nwb.invalid_times.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.invalid_times.start_time # (VectorData) Start time of epoch, in seconds
+nwb.invalid_times.stop_time # (VectorData) Stop time of epoch, in seconds
+nwb.invalid_times.tags # (VectorIndex) Index for VectorData 'tags'
+# nwb.invalid_times.tags_index[0] # (ndarray)
+nwb.units # (Units)
+nwb.units.description # (str) 
+nwb.units.colnames # (tuple)
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 2572 rows and 32 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.units.isi_violations # (VectorData) no description
+nwb.units.isolation_distance # (VectorData) no description
+nwb.units.PT_ratio # (VectorData) no description
+nwb.units.snr # (VectorData) no description
+nwb.units.spread # (VectorData) no description
+nwb.units.local_index # (VectorData) no description
+nwb.units.cluster_id # (VectorData) no description
+nwb.units.waveform_halfwidth # (VectorData) no description
+nwb.units.cumulative_drift # (VectorData) no description
+nwb.units.velocity_above # (VectorData) no description
+nwb.units.l_ratio # (VectorData) no description
+nwb.units.waveform_duration # (VectorData) no description
+nwb.units.repolarization_slope # (VectorData) no description
+nwb.units.amplitude # (VectorData) no description
+nwb.units.amplitude_cutoff # (VectorData) no description
+nwb.units.recovery_slope # (VectorData) no description
+nwb.units.velocity_below # (VectorData) no description
+nwb.units.d_prime # (VectorData) no description
+nwb.units.max_drift # (VectorData) no description
+nwb.units.peak_channel_id # (VectorData) no description
+nwb.units.quality # (VectorData) no description
+nwb.units.silhouette_score # (VectorData) no description
+nwb.units.nn_hit_rate # (VectorData) no description
+nwb.units.presence_ratio # (VectorData) no description
+nwb.units.firing_rate # (VectorData) no description
+nwb.units.nn_miss_rate # (VectorData) no description
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+nwb.units.spike_amplitudes # (VectorIndex) Index for VectorData 'spike_amplitudes'
+# nwb.units.spike_amplitudes_index[0] # (ndarray)
+# nwb.units.spike_amplitudes_index[1] # (ndarray)
+# nwb.units.spike_amplitudes_index[2] # (ndarray)
+# nwb.units.spike_amplitudes_index[3] # (ndarray)
+# ...
+nwb.units.waveform_mean # (VectorIndex) Index for VectorData 'waveform_mean'
+# nwb.units.waveform_mean_index[0] # (ndarray)
+# nwb.units.waveform_mean_index[1] # (ndarray)
+# nwb.units.waveform_mean_index[2] # (ndarray)
+# nwb.units.waveform_mean_index[3] # (ndarray)
+# ...
+
+STDERR:
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/src/dandi-ai-notebooks-3/packages/get-nwbfile-info/src/get_nwbfile_info/core.py:346: UserWarning: Warning: Duplicate entries found in the results.
+  warnings.warn("Warning: Duplicate entries found in the results.")
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 8
+Submitting completion request...
+Processing response...
+The next step is to perform exploratory research. I'll start by creating a script in `explore/` to examine `EyeTracking` data. Specifically, I'll plot the `pupil_tracking.area` for a short duration. This will help me understand the nature of this data and whether it's suitable for inclusion in the notebook. Plots will be saved to `explore/` and then read using `read_image`.
+
+Tool: write_to_file
+Params: {'path': 'explore/plot_pupil_area.py', 'content': '# explore/plot_pupil_area.py\n# This script loads a subset of pupil area data from the NWB file\n# and plots it to visualize changes over a short time period.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\n\nsns.set_theme()\n\n# Load NWB file\nurl = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file, mode=\'r\') # Add mode=\'r\'\nnwb = io.read()\n\n# Access pupil tracking data\npupil_tracking = nwb.acquisition[\'EyeTracking\'].spatial_series[\'pupil_tracking\']\npupil_area_data = pupil_tracking.area\npupil_timestamps = pupil_tracking.timestamps\n\n# Select a subset of data to plot (e.g., first 1000 points)\nnum_points_to_plot = 1000\nsubset_pupil_area = pupil_area_data[:num_points_to_plot]\nsubset_timestamps = pupil_timestamps[:num_points_to_plot]\n\n# Create the plot\nplt.figure(figsize=(10, 5))\nplt.plot(subset_timestamps, subset_pupil_area)\nplt.xlabel("Time (s)")\nplt.ylabel(f"Pupil Area ({pupil_tracking.area.attrs.get(\'unit\', \'unknown unit\')})")\nplt.title(f"Pupil Area over Time (First {num_points_to_plot} points)")\nplt.grid(True)\nplt.savefig("explore/pupil_area_plot.png")\nplt.close()\n\nprint("Pupil area plot saved to explore/pupil_area_plot.png")\n\n# Print some info about the data\nprint(f"Shape of pupil_area_data: {pupil_area_data.shape}")\nprint(f"Shape of pupil_timestamps: {pupil_timestamps.shape}")\nif pupil_area_data.shape[0] > 0:\n    print(f"First 5 pupil area values: {pupil_area_data[:5]}")\n    print(f"First 5 timestamps: {pupil_timestamps[:5]}")\nelse:\n    print("Pupil area data is empty.")\n\nio.close()'}
+================================
+Content to be written to explore/plot_pupil_area.py:
+# explore/plot_pupil_area.py
+# This script loads a subset of pupil area data from the NWB file
+# and plots it to visualize changes over a short time period.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+sns.set_theme()
+
+# Load NWB file
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file, mode='r') # Add mode='r'
+nwb = io.read()
+
+# Access pupil tracking data
+pupil_tracking = nwb.acquisition['EyeTracking'].spatial_series['pupil_tracking']
+pupil_area_data = pupil_tracking.area
+pupil_timestamps = pupil_tracking.timestamps
+
+# Select a subset of data to plot (e.g., first 1000 points)
+num_points_to_plot = 1000
+subset_pupil_area = pupil_area_data[:num_points_to_plot]
+subset_timestamps = pupil_timestamps[:num_points_to_plot]
+
+# Create the plot
+plt.figure(figsize=(10, 5))
+plt.plot(subset_timestamps, subset_pupil_area)
+plt.xlabel("Time (s)")
+plt.ylabel(f"Pupil Area ({pupil_tracking.area.attrs.get('unit', 'unknown unit')})")
+plt.title(f"Pupil Area over Time (First {num_points_to_plot} points)")
+plt.grid(True)
+plt.savefig("explore/pupil_area_plot.png")
+plt.close()
+
+print("Pupil area plot saved to explore/pupil_area_plot.png")
+
+# Print some info about the data
+print(f"Shape of pupil_area_data: {pupil_area_data.shape}")
+print(f"Shape of pupil_timestamps: {pupil_timestamps.shape}")
+if pupil_area_data.shape[0] > 0:
+    print(f"First 5 pupil area values: {pupil_area_data[:5]}")
+    print(f"First 5 timestamps: {pupil_timestamps[:5]}")
+else:
+    print("Pupil area data is empty.")
+
+io.close()
+================================
+Total prompt tokens: 67232 + 0
+Total completion tokens: 2995 + 0
+
+=========================================
+
+write_to_file for 'explore/plot_pupil_area.py':
+Successfully wrote 1707 characters to explore/plot_pupil_area.py
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 10
+Submitting completion request...
+Processing response...
+I've written the script `explore/plot_pupil_area.py`. The next step is to execute this script to generate the plot and some textual output about the pupil tracking data. I'll use a timeout of 90 seconds as specified.
+
+Tool: execute_command
+Params: {'command': 'python explore/plot_pupil_area.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/plot_pupil_area.py
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+Pupil area plot saved to explore/pupil_area_plot.png
+Shape of pupil_area_data: (488419,)
+Shape of pupil_timestamps: (488419,)
+First 5 pupil area values: [nan nan nan nan nan]
+First 5 timestamps: [13.88318 13.89985 13.91651 13.93318 13.94985]
+Total prompt tokens: 100792 + 0
+Total completion tokens: 3133 + 0
+
+=========================================
+
+execute_command 'python explore/plot_pupil_area.py' (requires approval):
+Command executed successfully
+STDOUT:
+Pupil area plot saved to explore/pupil_area_plot.png
+Shape of pupil_area_data: (488419,)
+Shape of pupil_timestamps: (488419,)
+First 5 pupil area values: [nan nan nan nan nan]
+First 5 timestamps: [13.88318 13.89985 13.91651 13.93318 13.94985]
+
+STDERR:
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 12
+Submitting completion request...
+Processing response...
+The script `explore/plot_pupil_area.py` ran and produced an image `explore/pupil_area_plot.png`. The STDOUT indicates that the initial data points for pupil area are `nan`. I need to examine the plot to see if it's informative or if the `nan` values render it useless. I will use `read_image` to view the plot. I'll instruct the AI to describe the plot, paying attention to whether it shows any meaningful data or if it's largely empty due to the NaNs.
+
+Tool: read_image
+Params: {'path': 'explore/pupil_area_plot.png', 'instructions': 'Describe the plot. Does it show a clear trend or is it mostly empty/flat due to NaN values? Is this plot informative and useful for a researcher trying to understand pupil area data?'}
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 134991 + 325
+Total completion tokens: 3417 + 755
+
+=========================================
+
+read_image for 'explore/pupil_area_plot.png':
+The image for explore/pupil_area_plot.png is attached. AI description: *   **Plot Description:** This line plot shows pupil area (in unknown units) fluctuating over a time period from approximately 14.5 to 30.5 seconds. The area varies considerably, with peaks above 2400 and troughs below 1400.
+*   **Trend/NaN Values:** The plot shows dynamic changes rather than a single clear trend. It is densely populated with data, not empty or flat due to NaN values, indicating continuous measurement during this interval.
+*   **Informativeness/Usefulness:** Yes, the plot is informative and useful. It clearly visualizes the variability and dynamic range of pupil area over time, which is valuable for a researcher studying pupillary responses, although the lack of specific units is a limitation.
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 14
+Submitting completion request...
+Processing response...
+The previous exploration of pupil area was successful. Now, I'll investigate another type of data: running speed. I'll write a script `explore/plot_running_speed.py` to load a subset of `running_speed.data` and its corresponding `running_speed.timestamps` from the NWB file. This script will generate a plot and save it to `explore/running_speed_plot.png`.
+
+Tool: write_to_file
+Params: {'path': 'explore/plot_running_speed.py', 'content': '# explore/plot_running_speed.py\n# This script loads a subset of running speed data from the NWB file\n# and plots it to visualize changes over a short time period.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\n\nsns.set_theme()\n\n# Load NWB file\nurl = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file, mode=\'r\')\nnwb = io.read()\n\n# Access running speed data\nrunning_speed_ts = nwb.processing[\'running\'][\'running_speed\']\nrunning_speed_data = running_speed_ts.data\nrunning_speed_timestamps = running_speed_ts.timestamps\n\n# Select a subset of data to plot (e.g., first 2000 points)\nnum_points_to_plot = 2000\nsubset_running_speed = running_speed_data[:num_points_to_plot]\nsubset_timestamps = running_speed_timestamps[:num_points_to_plot]\n\n# Create the plot\nplt.figure(figsize=(10, 5))\nplt.plot(subset_timestamps, subset_running_speed)\nplt.xlabel("Time (s)")\nplt.ylabel(f"Running Speed ({running_speed_ts.unit})")\nplt.title(f"Running Speed over Time (First {num_points_to_plot} points)")\nplt.grid(True)\nplt.savefig("explore/running_speed_plot.png")\nplt.close()\n\nprint("Running speed plot saved to explore/running_speed_plot.png")\n\n# Print some info about the data\nprint(f"Shape of running_speed_data: {running_speed_data.shape}")\nprint(f"Shape of running_speed_timestamps: {running_speed_timestamps.shape}")\nif running_speed_data.shape[0] > 0:\n    print(f"First 5 running_speed values: {running_speed_data[:5]}")\n    print(f"First 5 timestamps: {running_speed_timestamps[:5]}")\nelse:\n    print("Running speed data is empty.")\n\nio.close()'}
+================================
+Content to be written to explore/plot_running_speed.py:
+# explore/plot_running_speed.py
+# This script loads a subset of running speed data from the NWB file
+# and plots it to visualize changes over a short time period.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+sns.set_theme()
+
+# Load NWB file
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file, mode='r')
+nwb = io.read()
+
+# Access running speed data
+running_speed_ts = nwb.processing['running']['running_speed']
+running_speed_data = running_speed_ts.data
+running_speed_timestamps = running_speed_ts.timestamps
+
+# Select a subset of data to plot (e.g., first 2000 points)
+num_points_to_plot = 2000
+subset_running_speed = running_speed_data[:num_points_to_plot]
+subset_timestamps = running_speed_timestamps[:num_points_to_plot]
+
+# Create the plot
+plt.figure(figsize=(10, 5))
+plt.plot(subset_timestamps, subset_running_speed)
+plt.xlabel("Time (s)")
+plt.ylabel(f"Running Speed ({running_speed_ts.unit})")
+plt.title(f"Running Speed over Time (First {num_points_to_plot} points)")
+plt.grid(True)
+plt.savefig("explore/running_speed_plot.png")
+plt.close()
+
+print("Running speed plot saved to explore/running_speed_plot.png")
+
+# Print some info about the data
+print(f"Shape of running_speed_data: {running_speed_data.shape}")
+print(f"Shape of running_speed_timestamps: {running_speed_timestamps.shape}")
+if running_speed_data.shape[0] > 0:
+    print(f"First 5 running_speed values: {running_speed_data[:5]}")
+    print(f"First 5 timestamps: {running_speed_timestamps[:5]}")
+else:
+    print("Running speed data is empty.")
+
+io.close()
+================================
+Total prompt tokens: 170005 + 325
+Total completion tokens: 4251 + 755
+
+=========================================
+
+write_to_file for 'explore/plot_running_speed.py':
+Successfully wrote 1735 characters to explore/plot_running_speed.py
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 16
+Submitting completion request...
+Processing response...
+I have written the script `explore/plot_running_speed.py`. The next step is to execute this script. This will generate `explore/running_speed_plot.png` and print some information about the running speed data. I will use a timeout of 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/plot_running_speed.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/plot_running_speed.py
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+Running speed plot saved to explore/running_speed_plot.png
+Shape of running_speed_data: (420018,)
+Shape of running_speed_timestamps: (420018,)
+First 5 running_speed values: [ 2.2361834   0.87162083 -1.6018153  -1.5059888   3.400482  ]
+First 5 timestamps: [43.34847 43.3614  43.37809 43.39463 43.41129]
+Total prompt tokens: 205980 + 325
+Total completion tokens: 4393 + 755
+
+=========================================
+
+execute_command 'python explore/plot_running_speed.py' (requires approval):
+Command executed successfully
+STDOUT:
+Running speed plot saved to explore/running_speed_plot.png
+Shape of running_speed_data: (420018,)
+Shape of running_speed_timestamps: (420018,)
+First 5 running_speed values: [ 2.2361834   0.87162083 -1.6018153  -1.5059888   3.400482  ]
+First 5 timestamps: [43.34847 43.3614  43.37809 43.39463 43.41129]
+
+STDERR:
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 18
+Submitting completion request...
+Processing response...
+The script `explore/plot_running_speed.py` ran successfully and generated the plot `explore/running_speed_plot.png`. I need to check if this plot visually represents the running speed data effectively. I'll use `read_image` to view the plot. I will ask the AI to describe the plot and assess its clarity and usefulness for understanding the running behavior.
+
+Tool: read_image
+Params: {'path': 'explore/running_speed_plot.png', 'instructions': 'Describe the plot. Does it show running speed variations clearly? Is this plot informative and useful for a researcher?'}
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+Total prompt tokens: 242664 + 634
+Total completion tokens: 4588 + 1953
+
+=========================================
+
+read_image for 'explore/running_speed_plot.png':
+The image for explore/running_speed_plot.png is attached. AI description: Okay, here is the analysis:
+
+The plot displays running speed (cm/s) over time (s) for the first 2000 data points, covering approximately 34 seconds. It shows extremely rapid, high-frequency oscillations largely contained between -5 and +5 cm/s.
+
+Clear patterns or slower variations in running speed are **not clearly visible** due to the density and high frequency of the plotted data, which resembles noise.
+
+For a researcher, this plot **is only moderately informative** as presented. It reveals the raw signal's noisy character and range but is **not immediately useful** for understanding meaningful behavioral speed changes without further processing (e.g., smoothing, averaging).
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 20
+Submitting completion request...
+Processing response...
+I've explored pupil area and running speed. Now I'll focus on the `Units` table, which contains spike sorting results. A common visualization is a spike raster plot. I will write `explore/plot_spike_raster.py`.
+This script will:
+1.  Load the NWB file.
+2.  Access the `nwb.units` table.
+3.  Select a small number of units (e.g., the first 5 valid units).
+4.  Define a time interval (e.g., 10 seconds).
+5.  Extract spike times for the selected units within that interval.
+6.  Generate a raster plot using `matplotlib.pyplot.eventplot`.
+7.  Save the plot to `explore/spike_raster_plot.png`.
+8.  Print the IDs of the selected units.
+
+Tool: write_to_file
+Params: {'path': 'explore/plot_spike_raster.py', 'content': '# explore/plot_spike_raster.py\n# This script loads spike times for a few units from the NWB file\n# and creates a raster plot for a specific time interval.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\n\nsns.set_theme()\n\n# Load NWB file\nurl = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file, mode=\'r\')\nnwb = io.read()\n\n# Access units table\nunits_df = nwb.units.to_dataframe()\n\n# Select a few units for plotting (e.g., first 5 units)\nnum_units_to_plot = 5\nunit_ids_to_plot = units_df.index[:num_units_to_plot]\nprint(f"Selected unit IDs for raster plot: {unit_ids_to_plot.tolist()}")\n\n# Define time interval for plotting\nstart_time = 50.0\nend_time = 60.0  # Plot 10 seconds of data\n\n# Extract spike times for selected units within the interval\nspike_times_list = []\nvalid_unit_indices = []\nfor i, unit_id in enumerate(unit_ids_to_plot):\n    # Get all spike times for the unit\n    all_spike_times = nwb.units[\'spike_times\'][unit_id]\n    # Filter spike times within the desired interval\n    interval_spike_times = all_spike_times[(all_spike_times >= start_time) & (all_spike_times < end_time)]\n    if len(interval_spike_times) > 0:\n        spike_times_list.append(interval_spike_times)\n        valid_unit_indices.append(i) # Keep track of units that had spikes in the interval\n\n# Prepare data for eventplot\nplot_unit_ids = unit_ids_to_plot[valid_unit_indices]\ncolors = plt.cm.viridis(np.linspace(0, 1, len(plot_unit_ids)))\n\n# Create raster plot\nplt.figure(figsize=(12, 6))\nif not spike_times_list:\n    print(f"No spikes found for selected units in the interval {start_time}-{end_time}s.")\n    plt.text(0.5, 0.5, \'No spikes in interval\', horizontalalignment=\'center\', verticalalignment=\'center\')\nelse:\n    plt.eventplot(spike_times_list, colors=colors, lineoffsets=np.arange(len(plot_unit_ids)), linelengths=0.8)\n    plt.yticks(np.arange(len(plot_unit_ids)), plot_unit_ids)\n    plt.ylabel("Unit ID")\n\nplt.xlabel("Time (s)")\nplt.title(f"Spike Raster Plot ({start_time}s - {end_time}s)")\nplt.grid(True, axis=\'x\')\nplt.xlim(start_time, end_time)\nplt.savefig("explore/spike_raster_plot.png")\nplt.close()\n\nprint(f"Spike raster plot saved to explore/spike_raster_plot.png")\n\nio.close()'}
+================================
+Content to be written to explore/plot_spike_raster.py:
+# explore/plot_spike_raster.py
+# This script loads spike times for a few units from the NWB file
+# and creates a raster plot for a specific time interval.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+sns.set_theme()
+
+# Load NWB file
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file, mode='r')
+nwb = io.read()
+
+# Access units table
+units_df = nwb.units.to_dataframe()
+
+# Select a few units for plotting (e.g., first 5 units)
+num_units_to_plot = 5
+unit_ids_to_plot = units_df.index[:num_units_to_plot]
+print(f"Selected unit IDs for raster plot: {unit_ids_to_plot.tolist()}")
+
+# Define time interval for plotting
+start_time = 50.0
+end_time = 60.0  # Plot 10 seconds of data
+
+# Extract spike times for selected units within the interval
+spike_times_list = []
+valid_unit_indices = []
+for i, unit_id in enumerate(unit_ids_to_plot):
+    # Get all spike times for the unit
+    all_spike_times = nwb.units['spike_times'][unit_id]
+    # Filter spike times within the desired interval
+    interval_spike_times = all_spike_times[(all_spike_times >= start_time) & (all_spike_times < end_time)]
+    if len(interval_spike_times) > 0:
+        spike_times_list.append(interval_spike_times)
+        valid_unit_indices.append(i) # Keep track of units that had spikes in the interval
+
+# Prepare data for eventplot
+plot_unit_ids = unit_ids_to_plot[valid_unit_indices]
+colors = plt.cm.viridis(np.linspace(0, 1, len(plot_unit_ids)))
+
+# Create raster plot
+plt.figure(figsize=(12, 6))
+if not spike_times_list:
+    print(f"No spikes found for selected units in the interval {start_time}-{end_time}s.")
+    plt.text(0.5, 0.5, 'No spikes in interval', horizontalalignment='center', verticalalignment='center')
+else:
+    plt.eventplot(spike_times_list, colors=colors, lineoffsets=np.arange(len(plot_unit_ids)), linelengths=0.8)
+    plt.yticks(np.arange(len(plot_unit_ids)), plot_unit_ids)
+    plt.ylabel("Unit ID")
+
+plt.xlabel("Time (s)")
+plt.title(f"Spike Raster Plot ({start_time}s - {end_time}s)")
+plt.grid(True, axis='x')
+plt.xlim(start_time, end_time)
+plt.savefig("explore/spike_raster_plot.png")
+plt.close()
+
+print(f"Spike raster plot saved to explore/spike_raster_plot.png")
+
+io.close()
+================================
+Total prompt tokens: 280078 + 634
+Total completion tokens: 6128 + 1953
+
+=========================================
+
+write_to_file for 'explore/plot_spike_raster.py':
+Successfully wrote 2379 characters to explore/plot_spike_raster.py
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 22
+Submitting completion request...
+Processing response...
+I have written the script `explore/plot_spike_raster.py` to visualize spike times for the first few units. I will now execute this script. It should generate `explore/spike_raster_plot.png` and print the unit IDs being plotted. The timeout is set to 90 seconds.
+
+Tool: execute_command
+Params: {'command': 'python explore/plot_spike_raster.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/plot_spike_raster.py
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+Total prompt tokens: 318809 + 634
+Total completion tokens: 6275 + 1953
+
+=========================================
+
+execute_command 'python explore/plot_spike_raster.py' (requires approval):
+Command timed out after 90 seconds and was forcefully terminated
+STDERR (partial):
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-common' version 1.6.0 because version 1.8.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.6.0-alpha because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'hdmf-experimental' version 0.3.0 because version 0.5.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 24
+Submitting completion request...
+Processing response...
+The previous script timed out. I need to revise it to be more efficient.
+Plan:
+1. Create a revised script: `explore/plot_spike_raster_revised.py`.
+2. Reduce `num_units_to_plot` to 3.
+3. Reduce the time interval (`start_time=50`, `end_time=55`).
+4. Use `nwb.units.id[:]` to get all unit IDs first, then select the first few. This avoids converting the entire complex Units table to a DataFrame just for IDs.
+5. Keep the rest of the logic (loading spike times per unit, filtering, plotting).
+6. Write the revised script.
+
+Tool: write_to_file
+Params: {'path': 'explore/plot_spike_raster_revised.py', 'content': '# explore/plot_spike_raster_revised.py\n# This script loads spike times for fewer units from the NWB file\n# and creates a raster plot for a shorter time interval.\n\nimport pynwb\nimport h5py\nimport remfile\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\n\nsns.set_theme()\n\n# Load NWB file\nurl = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"\nremote_file = remfile.File(url)\nh5_file = h5py.File(remote_file)\n# Increase cache size for potentially better performance with repeated access\n# remote_file = remfile.File(url, _cache_size=50*1024*1024)\n# h5_file = h5py.File(remote_file, rdcc_nbytes=50*1024*1024)\nio = pynwb.NWBHDF5IO(file=h5_file, mode=\'r\')\nnwb = io.read()\n\n# Access units table and get IDs\nall_unit_ids = nwb.units.id[:] # Get all unit IDs directly\n\n# Select a few units for plotting (e.g., first 3 units)\nnum_units_to_plot = 3\nif len(all_unit_ids) < num_units_to_plot:\n    num_units_to_plot = len(all_unit_ids) # Adjust if fewer units exist\n\nif num_units_to_plot > 0:\n    unit_ids_to_plot = all_unit_ids[:num_units_to_plot]\n    print(f"Selected unit IDs for raster plot: {unit_ids_to_plot.tolist()}")\n\n    # Define time interval for plotting\n    start_time = 50.0\n    end_time = 55.0  # Plot 5 seconds of data\n\n    # Extract spike times for selected units within the interval\n    spike_times_list = []\n    valid_unit_indices = []\n    for i, unit_id in enumerate(unit_ids_to_plot):\n        try:\n            # Get all spike times for the unit\n            # Accessing the spike_times VectorData directly\n            spike_times_vd = nwb.units[\'spike_times\']\n            # Get the data corresponding to the index for this unit_id\n            unit_idx = np.where(all_unit_ids == unit_id)[0][0]\n            idx_start = spike_times_vd.data.ind[unit_idx]\n            idx_end = spike_times_vd.data.ind[unit_idx+1]\n            all_spike_times = spike_times_vd.data.data[idx_start:idx_end]\n\n            # Filter spike times within the desired interval\n            interval_spike_times = all_spike_times[(all_spike_times >= start_time) & (all_spike_times < end_time)]\n            if len(interval_spike_times) > 0:\n                spike_times_list.append(interval_spike_times)\n                valid_unit_indices.append(i) # Keep track of units that had spikes\n        except Exception as e:\n            print(f"Error processing unit {unit_id}: {e}")\n            continue # Skip this unit if there\'s an error\n\n\n    # Prepare data for eventplot\n    plot_unit_ids = unit_ids_to_plot[valid_unit_indices]\n    colors = plt.cm.viridis(np.linspace(0, 1, len(plot_unit_ids)))\n\n    # Create raster plot\n    plt.figure(figsize=(12, 4)) # Adjust figure size potentially\n    if not spike_times_list:\n        print(f"No spikes found for selected units {unit_ids_to_plot.tolist()} in the interval {start_time}-{end_time}s.")\n        plt.text(0.5, 0.5, \'No spikes in interval\', horizontalalignment=\'center\', verticalalignment=\'center\')\n    else:\n        plt.eventplot(spike_times_list, colors=colors, lineoffsets=np.arange(len(plot_unit_ids)), linelengths=0.8)\n        plt.yticks(np.arange(len(plot_unit_ids)), plot_unit_ids)\n        plt.ylabel("Unit ID")\n\n    plt.xlabel("Time (s)")\n    plt.title(f"Spike Raster Plot ({start_time}s - {end_time}s)")\n    plt.grid(True, axis=\'x\')\n    plt.xlim(start_time, end_time)\n    plt.savefig("explore/spike_raster_plot.png") # Overwrite previous attempt\n    plt.close()\n\n    print(f"Spike raster plot saved to explore/spike_raster_plot.png")\n\nelse:\n    print("No units found in the file.")\n\nio.close()'}
+================================
+Content to be written to explore/plot_spike_raster_revised.py:
+# explore/plot_spike_raster_revised.py
+# This script loads spike times for fewer units from the NWB file
+# and creates a raster plot for a shorter time interval.
+
+import pynwb
+import h5py
+import remfile
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+sns.set_theme()
+
+# Load NWB file
+url = "https://api.dandiarchive.org/api/assets/2f2ac304-83a3-4352-8612-5f34b68062a0/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+# Increase cache size for potentially better performance with repeated access
+# remote_file = remfile.File(url, _cache_size=50*1024*1024)
+# h5_file = h5py.File(remote_file, rdcc_nbytes=50*1024*1024)
+io = pynwb.NWBHDF5IO(file=h5_file, mode='r')
+nwb = io.read()
+
+# Access units table and get IDs
+all_unit_ids = nwb.units.id[:] # Get all unit IDs directly
+
+# Select a few units for plotting (e.g., first 3 units)
+num_units_to_plot = 3
+if len(all_unit_ids) < num_units_to_plot:
+    num_units_to_plot = len(all_unit_ids) # Adjust if fewer units exist
+
+if num_units_to_plot > 0:
+    unit_ids_to_plot = all_unit_ids[:num_units_to_plot]
+    print(f"Selected unit IDs for raster plot: {unit_ids_to_plot.tolist()}")
+
+    # Define time interval for plotting
+    start_time = 50.0
+    end_time = 55.0  # Plot 5 seconds of data
+
+    # Extract spike times for selected units within the interval
+    spike_times_list = []
+    valid_unit_indices = []
+    for i, unit_id in enumerate(unit_ids_to_plot):
+        try:
+            # Get all spike times for the unit
+            # Accessing the spike_times VectorData directly
+            spike_times_vd = nwb.units['spike_times']
+            # Get the data corresponding to the index for this unit_id
+            unit_idx = np.where(all_unit_ids == unit_id)[0][0]
+            idx_start = spike_times_vd.data.ind[unit_idx]
+            idx_end = spike_times_vd.data.ind[unit_idx+1]
+            all_spike_times = spike_times_vd.data.data[idx_start:idx_end]
+
+            # Filter spike times within the desired interval
+            interval_spike_times = all_spike_times[(all_spike_times >= start_time) & (all_spike_times < end_time)]
+            if len(interval_spike_times) > 0:
+                spike_times_list.append(interval_spike_times)
+                valid_unit_indices.append(i) # Keep track of units that had spikes
+        except Exception as e:
+            print(f"Error processing unit {unit_id}: {e}")
+            continue # Skip this unit if there's an error
+
+
+    # Prepare data for eventplot
+    plot_unit_ids = unit_ids_to_plot[valid_unit_indices]
+    colors = plt.cm.viridis(np.linspace(0, 1, len(plot_unit_ids)))
+
+    # Create raster plot
+    plt.figure(figsize=(12, 4)) # Adjust figure size potentially
+    if not spike_times_list:
+        print(f"No spikes found for selected units {unit_ids_to_plot.tolist()} in the interval {start_time}-{end_time}s.")
+        plt.text(0.5, 0.5, 'No spikes in interval', horizontalalignment='center', verticalalignment='center')
+    else:
+        plt.eventplot(spike_times_list, colors=colors, lineoffsets=np.arange(len(plot_unit_ids)), linelengths=0.8)
+        plt.yticks(np.arange(len(plot_unit_ids)), plot_unit_ids)
+        plt.ylabel("Unit ID")
+
+    plt.xlabel("Time (s)")
+    plt.title(f"Spike Raster Plot ({start_time}s - {end_time}s)")
+    plt.grid(True, axis='x')
+    plt.xlim(start_time, end_time)
+    plt.savefig("explore/spike_raster_plot.png") # Overwrite previous attempt
+    plt.close()
+
+    print(f"Spike raster plot saved to explore/spike_raster_plot.png")
+
+else:
+    print("No units found in the file.")
+
+io.close()
+================================
+Total prompt tokens: 358108 + 634
+Total completion tokens: 8238 + 1953
+
+=========================================
+
+write_to_file for 'explore/plot_spike_raster_revised.py':
+Successfully wrote 3585 characters to explore/plot_spike_raster_revised.py
+=========================================
+
+Using model: google/gemini-2.5-pro-preview
+Num. messages in conversation: 26
+Submitting completion request...
+Processing response...
+I have created the revised script `explore/plot_spike_raster_revised.py` with optimizations (fewer units, shorter interval, direct ID access, trying to access spike times more directly via VectorData indices). I will execute this revised script to see if it completes within the 90-second timeout and generates the raster plot.
+
+Tool: execute_command
+Params: {'command': 'python explore/plot_spike_raster_revised.py', 'requires_approval': 'false', 'timeout': '90'}
+================================
+Command to be executed
+python explore/plot_spike_raster_revised.py
+================================
