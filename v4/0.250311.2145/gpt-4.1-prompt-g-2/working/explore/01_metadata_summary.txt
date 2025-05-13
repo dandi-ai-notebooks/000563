@@ -1,0 +1,44 @@
+Session description: LFP data and associated info for one probe
+Session start time: 2023-08-16 00:00:00-07:00
+Subject: 681446 (681446), Sex: M, Genotype: Pvalb-IRES-Cre/wt;Ai32(RCL-ChR2(H134R)_EYFP)/wt, Strain: Transgenic
+Institution: Allen Institute for Brain Science
+
+Electrode groups:
+  probeA: Ecephys Electrode Group, probe_id: 0, sampling rate: 625.0
+
+Devices:
+  probeA: Neuropixels 1.0 Probe, manufacturer: imec, probe_id: 0, sampling_rate: 30000.0
+
+Acquisition:
+  probe_0_lfp: Type <class 'pynwb.ecephys.LFP'>
+    ElectricalSeries: probe_0_lfp_data: data shape: (10168076, 73), data dtype: float32, unit: volts
+      (# chans: 73)
+      timestamps shape: (10168076,), ts unit: seconds
+  probe_0_lfp_data: Type <class 'pynwb.ecephys.ElectricalSeries'>
+    data shape: (10168076, 73), unit: volts
+
+Electrode table: 73 channels
+Columns: ['location', 'group', 'group_name', 'probe_vertical_position', 'probe_horizontal_position', 'probe_id', 'local_index', 'valid_data', 'x', 'y', 'z', 'imp', 'filtering']
+First 5 rows:
+   location                                                                                                                                                                                                                                                                                                                                                                                   group group_name  probe_vertical_position  probe_horizontal_position  probe_id  local_index  valid_data       x       y       z  imp                                              filtering
+id                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+2       APN  probeA abc.EcephysElectrodeGroup at 0x139411176889024\nFields:\n  description: Ecephys Electrode Group\n  device: probeA abc.EcephysProbe at 0x139411177590176\nFields:\n  description: Neuropixels 1.0 Probe\n  manufacturer: imec\n  probe_id: 0\n  sampling_rate: 30000.0\n\n  has_lfp_data: True\n  lfp_sampling_rate: 625.0\n  location: See electrode locations\n  probe_id: 0\n     probeA                       40                         59         0            2        True  8064.0  3068.0  7299.0  NaN  AP band: 500 Hz high-pass; LFP band: 1000 Hz low-pass
+6       APN  probeA abc.EcephysElectrodeGroup at 0x139411176889024\nFields:\n  description: Ecephys Electrode Group\n  device: probeA abc.EcephysProbe at 0x139411177590176\nFields:\n  description: Neuropixels 1.0 Probe\n  manufacturer: imec\n  probe_id: 0\n  sampling_rate: 30000.0\n\n  has_lfp_data: True\n  lfp_sampling_rate: 625.0\n  location: See electrode locations\n  probe_id: 0\n     probeA                       80                         59         0            6        True  8056.0  3032.0  7305.0  NaN  AP band: 500 Hz high-pass; LFP band: 1000 Hz low-pass
+10      APN  probeA abc.EcephysElectrodeGroup at 0x139411176889024\nFields:\n  description: Ecephys Electrode Group\n  device: probeA abc.EcephysProbe at 0x139411177590176\nFields:\n  description: Neuropixels 1.0 Probe\n  manufacturer: imec\n  probe_id: 0\n  sampling_rate: 30000.0\n\n  has_lfp_data: True\n  lfp_sampling_rate: 625.0\n  location: See electrode locations\n  probe_id: 0\n     probeA                      120                         59         0           10        True  8049.0  2996.0  7312.0  NaN  AP band: 500 Hz high-pass; LFP band: 1000 Hz low-pass
+14      APN  probeA abc.EcephysElectrodeGroup at 0x139411176889024\nFields:\n  description: Ecephys Electrode Group\n  device: probeA abc.EcephysProbe at 0x139411177590176\nFields:\n  description: Neuropixels 1.0 Probe\n  manufacturer: imec\n  probe_id: 0\n  sampling_rate: 30000.0\n\n  has_lfp_data: True\n  lfp_sampling_rate: 625.0\n  location: See electrode locations\n  probe_id: 0\n     probeA                      160                         59         0           14        True  8040.0  2952.0  7320.0  NaN  AP band: 500 Hz high-pass; LFP band: 1000 Hz low-pass
+18      APN  probeA abc.EcephysElectrodeGroup at 0x139411176889024\nFields:\n  description: Ecephys Electrode Group\n  device: probeA abc.EcephysProbe at 0x139411177590176\nFields:\n  description: Neuropixels 1.0 Probe\n  manufacturer: imec\n  probe_id: 0\n  sampling_rate: 30000.0\n\n  has_lfp_data: True\n  lfp_sampling_rate: 625.0\n  location: See electrode locations\n  probe_id: 0\n     probeA                      200                         59         0           18        True  8032.0  2916.0  7326.0  NaN  AP band: 500 Hz high-pass; LFP band: 1000 Hz low-pass
+Channels by location:
+location
+CA1         19
+VISam5       9
+VISam2/3     8
+DG-mo        7
+LP           7
+APN          5
+VISam6a      5
+root         4
+DG-sg        3
+VISam1       3
+DG-po        1
+VISam6b      1
+VISam4       1
